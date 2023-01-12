@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #D5FEFF;
+        }
+        form{
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<!--Phần 1-->
+
+        <form>
+            <H2 style="text-align: center; background: #ff4c00">SỞ THÍCH CỦA BẠN</H2>
+            <table  style="margin: auto; " >
+
+                <tr>
+
+                    <td>
+                        <label for="name">Họ và tên:</label>
+                    </td>
+                    <td>
+
+                            <input type="text" name="yourname" size="35"  id="name">
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" size="35" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="check">Sở thích:</label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" value="thethao" id="check" checked> Thể thao
+                        <input type="checkbox" value="amnhac" checked> Âm nhạc
+                        <input type="checkbox" value="docsach"> Đọc sách
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <input type="checkbox" value="luotweb"> Lướt web
+                        <input type="checkbox" value="choigame"> Chơi game
+                        <input type="checkbox" value="dienanh"> Điện ảnh
+                    </td>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <input type="checkbox" value="dulich"> Du lịch
+
+                    </td>
+                <tr>
+                    <td> </td>
+                    <td> <input type="button" name="btSubmit" value="Gửi thông tin">
+                        <input type="reset" name="btReset" value="Nhập lại">
+                    </td>
+                </tr>
+            </table>
+
+        </form> <br>
+<!-- Phần 2-->
+    <form style="background-color: #FFFDA9" action="https://james.codegym.vn/mod/assign/view.php?id=10399" method="get">
+        <H1 style="text-align: center; color: #2954FE; background-color: #D4FDD6">ĐĂNG KÝ HỌC VIÊN</H1>
+        <table style="margin: auto">
+            <tr>
+                <th> <label for="yourname">Họ và tên</label> </th>
+                <td><input type="text" name="yourname" id="yourname"> </td>
+            </tr>
+            <tr>
+                <th>Ngày sinh</th>
+                <td> <input type="date" name="birthday"></td>
+            </tr>
+            <tr>
+                <th>Giới tính</th>
+                <td>
+                    <input type="radio" name="sex" >Nam
+                    <input type="radio" name="sex" >Nữ
+                </td>
+            </tr>
+            <tr>
+                <th> Địa chỉ</th>
+                <td>
+                    <textarea name="" id="" cols="20" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>Lớp</th>
+                <td>
+                    <select>
+                        <option value="IT16301">IT16301</option>
+                        <option value="IT16302">IT16302</option>
+                        <option value="IT16303">IT16303</option>
+                        <option value="IT16304">IT16304</option>
+                        <option value="IT16305">IT16305</option>
+                        <option value="IT16306">IT16306</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
+            <tr>
+                <th>Điện thoại</th>
+                <td>
+                    <input type="number" name="number">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Đăng ký">
+                    <input type="reset" value="Nhập lại">
+
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

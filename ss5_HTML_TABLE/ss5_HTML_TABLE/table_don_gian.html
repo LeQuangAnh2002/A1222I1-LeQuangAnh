@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Table simple </title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .tkb1{
+            margin: auto;
+            font-family: Arial,sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        .tkb1 .tkb11 th{
+            border:1px solid #dddddd;
+            background-color: yellow;
+        }
+        .tkb1 td{
+            border:1px solid #dddddd;
+            background-color: #F7F7F7;
+        }
+        /* CSS Phần2 */
+        .tkb2{
+            margin: auto;
+            font-family: Arial,sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        .tkb2 tr .td2{
+            text-align: right;
+        }
+        .tkb2 .tkb21 th{
+            background-color: yellow;
+        }
+        .tkb2 .tkb22 td{
+            background-color: #FFB300;
+            text-align: center;
+        }
+        .tkb2 .tkb23 td{
+            background-color: #F7F7F7;
+        }
+
+    </style>
+</head>
+<body>
+<!--Phần 1-->
+    <form>
+        <H1>Thời khóa biểu lớp T0908I</H1>
+        <table class="tkb1" border="1">
+            <tr class="tkb11">
+                <th>Thứ 3</th>
+                <th>Thứ 5</th>
+                <th>Thứ 7</th>
+            </tr >
+            <tr>
+                <td>CF-T1,L1</td>
+                <td>CF-T2,L2</td>
+                <td>CF-T3,L3</td>
+            </tr>
+            <tr>
+                <td>CF-T4,L4</td>
+                <td>CF-Written Test</td>
+                <td>C-T1,L1</td>
+            </tr>
+        </table>
+    </form>
+<!--Phần 2-->
+    <form>
+        <H1>THỜI KHÓA BIỂU</H1>
+        <table class="tkb2">
+
+            <tr>
+                <td>Lớp T0908I</td>
+                <td colspan="5"></td>
+
+                <td class="td2">Thời gian học:13h30-17h30</td>
+
+            </tr>
+            <tr>
+                <td>Giáo viên: KhoaNV</td>
+                <td colspan="5"></td>
+
+                <td class="td2">Ngày học: Thứ 3,5,7</td>
+
+            </tr>
+            <tr>
+                <td>Phòng học:Class/Lab3</td>
+                <td colspan="6"></td>
+            </tr>
+        </table>
+    </form>
+    <form>
+       <table class="tkb2" border="1">
+           <tr class="tkb21">
+               <th colspan="3"></th>
+               <th>Thứ 3</th>
+               <th>Thứ 5</th>
+               <th>Thứ 7</th>
+           </tr>
+           <tr class="tkb22">
+               <td>Tuần</td>
+               <td>Ngày bắt đầu</td>
+               <td>Ngày kết thúc</td>
+               <td colspan="3">Môn học</td>
+           </tr>
+           <tr class="thk23">
+               <th>01</th>
+               <td>01/09/2009</td>
+               <td>05/09/2009</td>
+               <td>CF-T1,L1</td>
+               <td>CF-T2,L2</td>
+               <td>CF-T3,L3</td>
+           </tr>
+           <tr>
+               <th>02</th>
+               <td>01809/2009</td>
+               <td>12/09/2009</td>
+               <td>CF-T4,L4</td>
+               <td>CF-Written</td>
+               <td>C-T1,L1</td>
+           </tr>
+           <tr>
+               <th>03</th>
+               <td>...</td>
+               <td>...</td>
+               <td>...</td>
+               <td>...</td>
+               <td>...</td>
+
+           </tr>
+       </table>
+    </form>
+</body>
+</html>
