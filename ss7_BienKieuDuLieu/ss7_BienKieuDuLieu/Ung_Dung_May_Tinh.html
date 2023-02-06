@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <br>
+    <br>
+    <button onclick="plus()">Addition(+)</button>
+    <button onclick="subtraction()">Subtraction(-)</button>
+    <button onclick="multiplication()">Multiplication(x)</button>
+    <button onclick="devision()">Division(/)</button>
+    <br>
+     <p id="output"></p>
+    <script>
+
+        function  plus() {
+            let dauVao1= +document.getElementById('input1').value;
+            let dauVao2= +document.getElementById('input2').value;
+
+            let Addition = dauVao1 + dauVao2 ;
+            document.getElementById('output').innerText = "Result Division = " + Addition;
+        }
+
+        function  subtraction() {
+            let dauVao1= document.getElementById('input1').value;
+            let dauVao2= document.getElementById('input2').value;
+
+            let Addition = dauVao1 - dauVao2 ;
+            document.getElementById('output').innerText = "Result Division = " + Addition;
+        }
+        function  multiplication() {
+            let dauVao1= document.getElementById('input1').value;
+            let dauVao2= document.getElementById('input2').value;
+
+            let Addition = dauVao1 * dauVao2 ;
+            document.getElementById('output').innerText = "Result Division = " + Addition;
+        }
+
+        function  devision() {
+            let dauVao1= document.getElementById('input1').value;
+            let dauVao2= document.getElementById('input2').value;
+
+            let Addition = dauVao1 / dauVao2 ;
+            document.getElementById('output').innerText = "Result Division = " + Addition;
+        }
+    </script>
+</body>
+</html>
