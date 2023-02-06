@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<input type="text" id="in">
+<button onclick="doHub()">Click me</button>
+<p id="out"></p>
+   <script>
+       function  doHub() {
+        let r = document.getElementById('in').value;
+        let s = (r * r) * 3.14
+
+        document.getElementById('out').innerText= "Diện Tích : " + s;
+       }
+   </script>
+</body>
+</html>
