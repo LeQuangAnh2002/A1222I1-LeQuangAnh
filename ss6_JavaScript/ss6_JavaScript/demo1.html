@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Bắt sự kiện băng thuộc tính onchange khi người dùng thay đổi các tùy chọn-->
+<!--Khi thay đổi tùy chọn hàm do_something() sẽ được gọi hàm này do chúng ta định nghĩa-->
+    <select id="mySelect" onchange="do_something()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Camry">Camry</option>
+    </select>
 </body>
 </html>
+<script>
+    function do_something() {
+            //var dùng để khai báo biến selectValue để lưu trữ Value có id là mySelect
+            var selectValue = document.getElementById("mySelect").value;
+            alert(selectValue);
+    }
+
+    var selectedElement = document.getElementById("mySelect");
+    selectedElement.addEventListener("change",changeFunction);
+    function changeFunction() {
+        var selectValue = document.getElementById("mySelect").value;
+        alert(selectValue);
+    }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <button onclick="doNot()">Click Me</button>
+    <p id="out"></p>
+
+    <script>
+        function doNot() {
+            let r = document.getElementById('in').value;
+            let C= r * 2 * 3.14
+
+            document.getElementById('out').innerText= "Chu vi =" + C;
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            VatLy = prompt('Nhập điểm vật lý')
+            Toan = prompt('Nhập điểm toán')
+            HoaHoc = prompt('Nhập điểm hóa học')
+            SinhHoc = prompt('Nhập điểm sinh học')
+
+            let vatLy = parseInt(VatLy)
+            let toan = parseInt(Toan)
+            let hoaHoc = parseInt(HoaHoc)
+            let sinhHoc = parseInt(SinhHoc)
+
+            let Tong = vatLy + toan + hoaHoc + sinhHoc
+            let sum = (vatLy + toan + hoaHoc + sinhHoc) / 4
+
+            document.write('tong = '+ Tong +' . Sum =' + sum)
+        </script>
+</body>
+</html>

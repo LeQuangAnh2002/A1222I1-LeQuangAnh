@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <input type="text" id="dauvao">
+<select name="" id="selectVND">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+    <select name="" id="selectUSD">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+<button onclick="ClickChon()">Convert</button>
+<script>
+    function ClickChon() {
+        let giaTriVao = document.getElementById('dauvao').value
+        let selectVND = document.getElementById('selectVND').value
+        let selectUSD = document.getElementById('selectUSD').value
+
+        if(selectVND == selectUSD){
+            alert(giaTriVao);
+        }
+        if(selectVND == "VND" && selectUSD =="USD"){
+            alert(giaTriVao/24000);
+        } else if(selectVND == "USD" && selectUSD =="VND"){
+            alert(giaTriVao*24000);
+        }
+    }
+</script>
 </body>
 </html>
