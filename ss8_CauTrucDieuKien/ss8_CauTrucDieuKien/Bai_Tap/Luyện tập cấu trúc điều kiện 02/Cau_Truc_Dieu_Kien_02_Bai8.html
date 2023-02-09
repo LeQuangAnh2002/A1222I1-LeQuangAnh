@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập số tuổi bạn cần nhập</h3>
+<p>Nhập số tuổi vào ô trống </p>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+<script>
+    function doNoth() {
+        var soTuoi = document.getElementById('input').value;
+
+        if(isNaN(soTuoi) || soTuoi > 0){
+            document.getElementById('out').innerText = "Mời bạn nhập lại";
+
+        }else {
+            document.getElementById('out').innerText = "Năm nay bạn đã " + soTuoi + "tuổi";
+        }
+
+    }
+</script>
+</html>

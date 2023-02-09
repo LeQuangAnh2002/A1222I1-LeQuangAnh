@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển độ C sang độ F</h3>
+<span>Nhiệt độ bạn cần nhập vào </span>
+<input type="text" id="input">
+<select id="select1">
+    <option value="C">Độ C</option>
+    <option value="F">Độ F</option>
+</select>
+<select id="select2">
+    <option value="F">Độ F</option>
+    <option value="C">Độ C</option>
+</select>
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+    <script>
+        function doNoth() {
+            var dauvao = document.getElementById('input').value;
+            var select1 = document.getElementById('select1').value;
+            var select2 = document.getElementById('select2').value;
+
+            if(select1 == select2){
+                alert(dauvao)
+            }else if(select1 == "C" && select2 == "F"){
+                    var chuyenDoiF= 9/5 * dauvao + 32;
+                    alert(chuyenDoiF);
+            }else if(select1 == "F" && select2== "C"){
+                var chuyenDoiC= 5/9 * (dauvao - 32);
+                alert(chuyenDoiC);
+            }
+        }
+    </script>
+</html>

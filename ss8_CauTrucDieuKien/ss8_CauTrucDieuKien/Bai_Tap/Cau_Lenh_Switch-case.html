@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhập 1 tháng bất kì(Tháng 1 -> Tháng 12)</p>
+    <input type="number" id="input">
+    <button onclick="doNoth()">Tính số ngày</button>
+    <p id="output"></p>
+
+    <script>
+        function doNoth() {
+            var thang = parseInt(document.getElementById('input').value);
+            switch (thang) {
+                case 1:
+                     info = 'Tháng 1 có 31 ngày';
+                    break;
+                case 2:
+                    info = 'Tháng 2 có 28 ngày hoặc 29 ngày';
+                    break;
+                case 3:
+                    info = 'Tháng 3 có 31 ngày';
+                    break;
+                case 4:
+                    info = 'Tháng 4 có 30 ngày';
+                    break;
+                case 5:
+                    info = 'Tháng 5 có 31 ngày';
+                    break;
+                case 6:
+                    info = 'Tháng 6 có 30 ngày';
+                    break;
+                case 7:
+                    info = 'Tháng 7 có 31 ngày';
+                    break;
+                case 8:
+                    info = 'Tháng 8 có 31 ngày';
+                    break;
+                case 9:
+                    info = 'Tháng 9 có 30 ngày';
+                    break;
+                case 10:
+                    info = 'Tháng 10 có 31 ngày';
+                    break;
+                case 11:
+                    info = 'Tháng 11 có 30 ngày';
+                    break;
+                case 12:
+                    info = 'Tháng 12 có 31 ngày';
+                    break;
+                    default:
+                        info = 'Không tồn tại tháng bạn cần nhập';
+            }
+            document.getElementById('output').innerText = info;
+        }
+    </script>
+</body>
+</html>

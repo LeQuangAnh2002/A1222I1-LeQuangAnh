@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <table border="1">
+        <tr>
+            <td>Đến 5 triệu đồng </td>
+            <td> 5% TNTT</td>
+        </tr>
+        <tr>
+            <td>Trên 5 đến 10 triệu </td>
+            <td>10% TNTT</td>
+        </tr>
+        <tr>
+            <td>Trên 10 đến 18 triệu </td>
+            <td>15% TNTT</td>
+        </tr>
+        <tr>
+            <td>Trên 18 đến 32 triệu </td>
+            <td>20% TNTT</td>
+        </tr>
+        <tr>
+            <td>Trên 32 đến 52 triệu </td>
+            <td>25% TNTT</td>
+        </tr>
+        <tr>
+            <td>Trên 52 đến 80 triệu </td>
+            <td>30% TNTT</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="input1" placeholder="nhập..">
+            </td>
+            <td>
+                <input onclick="doNoth()" type="button" value="Click Me">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+    function doNoth() {
+        let dauvao = document.getElementById('input1').value;
+        if(!isNaN(dauvao)){
+            if(dauvao <= 50000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.05 + " Đồng");
+            }else if(dauvao <= 10000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.1  + " Đồng");
+            }else if(dauvao <= 18000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.15  + " Đồng");
+            }else if(dauvao <=32000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.20 + " Đồng");
+            }else if(dauvao <=52000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.25 + " Đồng");
+            }else if(dauvao <= 80000000){
+                alert("Tổng tiền phải trả : "+ dauvao*0.30 + " Đồng");
+            }
+
+        }else {
+            alert("Mời bạn nhập lại ")
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 3 số </title>
+</head>
+<body>
+    <H3> Nhập 3 số kiểm tra số lớn nhất trong 3 số</H3>
+    <p>Nhập A</p>
+    <input type="text" id="inputA" placeholder="Nhập A" required>
+    <p>Nhập B</p>
+    <input type="text" id="inputB" placeholder="Nhập B" required>
+    <p>Nhập C</p>
+    <input type="text" id="inputC" placeholder="Nhập C" required>
+    <br><br>
+    <button onclick="doNoth()">Click Me</button>
+    <p id="out"></p>
+
+    <script>
+        function doNoth() {
+            var nhapA = document.getElementById('inputA').value;
+            var nhapB = document.getElementById('inputB').value;
+            var nhapC = document.getElementById('inputC').value;
+            var max;
+
+            if( nhapA < 0 && nhapB < 0 && nhapC < 0){
+                document.getElementById('out').innerText = "Gía trị A,B,C nhập vào phải lớn hơn 0";
+
+            }else{
+                max = nhapA;
+                 if(nhapB > max){
+                     max = nhapB;
+                     document.getElementById('out').innerText = max + " là số lớn nhất";
+                 }if(nhapC > max){
+                     max = nhapC;
+                     document.getElementById('out').innerText = max +  " là số lớn nhất";
+                 }
+
+
+            }
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<h3>Tính cước điện thoại người dùng</h3>
+<p>Nhập số cuộc gọi vào ô trống </p>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+    <script>
+        function doNoth() {
+            var cuocGoi = document.getElementById('input').value;
+            var tongTien = cuocGoi * 3300;
+            if( isNaN(cuocGoi) || cuocGoi <= 0){
+                document.getElementById('out').innerText = 'Mời bạn nhập lại';
+            }else{
+                document.getElementById('out').innerText= cuocGoi + " cuả bạn tổng số tiền là " + tongTien + ' đồng';
+            }
+        }
+    </script>
+</html>

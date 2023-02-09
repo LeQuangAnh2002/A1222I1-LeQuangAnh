@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <table border="1">
+        <tr>
+            <td>Bậc 1(0 đến 50kWh) </td>
+            <td>1.678 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>Bậc 2(51 đến 100kWh) </td>
+            <td>1.734 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>Bậc 3(101 đến 200kWh) </td>
+            <td>2.014 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>Bậc 4(201 đến 300kWh) </td>
+            <td>2.536 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>Bậc 5(301 đến 400kWh) </td>
+            <td>2.834 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>Bậc 6(401 đến 500kWh) </td>
+            <td>2.927 đồng/kWh</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="input1" placeholder="nhập..">
+            </td>
+            <td>
+                <input onclick="doNoth()" type="button" value="Click Me">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script>
+        function doNoth() {
+            let dauvao = document.getElementById('input1').value;
+            if(!isNaN(dauvao)){
+                if(dauvao <= 50){
+                    alert("Tổng tiền phải trả : "+ dauvao*1.678 + " Đồng");
+                }else if(dauvao <= 100){
+                    alert("Tổng tiền phải trả : "+ dauvao*1.734  + " Đồng");
+                }else if(dauvao <= 200){
+                    alert("Tổng tiền phải trả : "+ dauvao*2.014  + " Đồng");
+                }else if(dauvao <=300){
+                    alert("Tổng tiền phải trả : "+ dauvao*2.536 + " Đồng");
+                }else if(dauvao <=400){
+                    alert("Tổng tiền phải trả : "+ dauvao*2.835 + " Đồng");
+                }else{
+                    alert("Tổng tiền phải trả : "+ dauvao*2.927 + " Đồng");
+                }
+
+            }else {
+                alert("Mời bạn nhập lại ")
+            }
+        }
+</script>
+</html>

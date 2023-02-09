@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Chuyển đổi met sang feet</h3>
+<p>Nhập số mét vào ô trống </p>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+    <script>
+        function doNoth() {
+            var met = document.getElementById('input').value;
+            var chuyenDoi = met * 3.2808;
+            if(isNaN(met) || met < 0){
+                document.getElementById('out').innerText = "Mời bạn nhập lại";
+
+            }else{
+                document.getElementById('out').innerText = met + " mét đổi qua feet là " + chuyenDoi;
+            }
+
+        }
+    </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhập Cân Nặng(kg)</p>
+    <input type="text" id="canNang">
+    <p>Nhập chiều cao(cm)</p>
+    <input type="text" id="chieuCao">
+    <br>
+    <br>
+    <button onclick="doNoth()">Click Me</button>
+    <p >Chỉ số BMI của cơ thẻ: </p><input id="output1">
+    <p id="output2"></p>
+
+    <script>
+
+
+        function doNoth() {
+            var weight = document.getElementById('canNang').value;
+            var height = document.getElementById('chieuCao').value/100;
+            var BMI = weight / (height * height);
+            if(weight <= 0 && height <=0){
+                document.getElementById('output2').innerText = "Không có kết quả";
+            }else {
+                if(BMI < 18){
+                    info = 'Thiếu cân';
+                }else if( BMI < 25){
+                    info = 'Bình thường';
+                }else if(BMI < 30){
+                    info = 'Thừa cân';
+                }else{
+                   info = 'Béo phí';
+                }
+                document.getElementById('output1').value = BMI;
+                document.getElementById('output2').innerText = info;
+
+            }
+        }
+    </script>
+</body>
+</html>

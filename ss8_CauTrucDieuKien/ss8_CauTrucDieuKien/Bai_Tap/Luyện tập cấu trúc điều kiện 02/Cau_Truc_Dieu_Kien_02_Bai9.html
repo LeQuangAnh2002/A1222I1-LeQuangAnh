@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = +prompt("Mời bạn nhập a");
+    let b = +prompt("Mời bạn nhập b");
+    let c = +prompt("Mời bạn nhập c");
+    if(!isNaN(a) && !isNaN(b) && !isNaN(c) ){
+        if((a+b)>c && (a+c)>b && (b+c)>a){
+            alert("3 cạnh là độ dài của 1 tam giác");
+        }else{
+            alert("3 cạnh không phải  là độ dài của 1 tam giác");
+        }
+
+    }else{
+        alert("sai giá trị")
+    }
+</script>
+</html>

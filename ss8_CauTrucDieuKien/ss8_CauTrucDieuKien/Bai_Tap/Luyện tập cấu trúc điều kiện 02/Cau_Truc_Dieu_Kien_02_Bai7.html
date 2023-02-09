@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Nhập a");
+        var b = prompt("Nhập b");
+        var c = prompt("Nhập c");
+        var delta = b*b -4 * a* c;
+        if(delta < 0 ){
+            alert("Phương trình vô nghiệm");
+        }else if(delta == 0){
+            alert("Phương trình có nghiệm kép"+ -b/2*a);
+        }else if(delta > 0){
+            var x1 = (-b+Math.sqrt(delta))/2*a;
+            var x2 = (-b-Math.sqrt(delta))/2*a;
+            alert("Phương trình có 2 nghiệm x1="+ x1 + " và x2= "+ x2 );
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập hai số a và b</title>
+</head>
+<body>
+    <p>Nhập số a:</p>
+    <input type="text" id="nhapA">
+    <p>Nhập số b:</p>
+    <input type="text" id="nhapB">
+
+    <br>
+    <br>
+    <button onclick="doNoth()">Click Me</button>
+    <p id="output"></p>
+
+    <script>
+        function doNoth() {
+            var soA = parseInt(document.getElementById('nhapA').value);
+            var soB = parseInt(document.getElementById('nhapB').value);
+            var SoC = soA % soB;
+            if(String(SoC) === "0"){
+                info = 'Số a chia hết b';
+            }else{
+                info = 'Số a không chia hết cho b';
+            }
+
+            document.getElementById('output').innerText = info;
+        }
+    </script>
+</body>
+</html>

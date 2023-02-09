@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập tuổi</title>
+</head>
+<body>
+    <h3>Điều kiện vào lớp 10</h3>
+    <p>Nhập tuổi vào ô trống</p>
+    <input type="text" id="input">
+    <button onclick="doNoth()"> Click Me</button>
+    <p id="out" style="color: red"></p>
+    <script>
+        function doNoth() {
+            var tuoi = document.getElementById('input').value;
+            if( tuoi <= 0){
+                document.getElementById('out').innerText = "Tuổi phải lớn hơn 0";
+            }else{
+                if( tuoi >= 15  ){
+
+                    document.getElementById('out').innerText = "Bạn đủ điều kiện vào lớp 10";
+                }else{
+                    document.getElementById('out').innerText = "Bạn không đủ điều kiện vào lớp 10";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

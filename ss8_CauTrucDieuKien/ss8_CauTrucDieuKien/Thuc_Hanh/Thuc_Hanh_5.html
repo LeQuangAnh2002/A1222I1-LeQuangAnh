@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="doReady()">
+    <img src="images/tải%20xuống.jfif" id="myImage" style="position: absolute; left: 0;right: 0; top: 0; height:200px " >
+    
+    <script>
+        function upArrowPressed() {
+            var element = document.getElementById('myImage');
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+
+        }
+        function dowArrowPressed() {
+            var element = document.getElementById('myImage');
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+
+        }
+        function leftArrowPressed() {
+            var element = document.getElementById('myImage');
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+
+        }
+        function rightArrowPressed() {
+            var element = document.getElementById('myImage');
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+        }
+        function moveArrowPressed(evt) {
+            switch (evt.keyCode) {
+                 case 37:
+                    leftArrowPressed();
+                    break;
+                 case 39:
+                     rightArrowPressed();
+                     break;
+                 case 38:
+                     upArrowPressed();
+                     break;
+                 case 40:
+                     dowArrowPressed();
+                     break;
+
+
+            }
+
+        }
+        function  doReady() {
+                window.addEventListener('keydown', moveArrowPressed);
+        }
+    </script>
+</body>
+</html>

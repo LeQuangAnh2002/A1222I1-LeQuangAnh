@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính diện tích hình vuông</h3>
+<p>Nhập số a vào ô trống </p>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+<script>
+    function doNoth() {
+        var soA = document.getElementById('input').value;
+        var dienTich = soA * soA;
+        if(isNaN(dienTich) || dienTich < 0){
+            document.getElementById('out').innerText = "Mời bạn nhập lại";
+
+        }else{
+            document.getElementById('out').innerText ='cạnh a nhập vào ' + soA + " diện tích hình vuông là " + dienTich + 'cm';
+        }
+
+    }
+</script>
+</html>

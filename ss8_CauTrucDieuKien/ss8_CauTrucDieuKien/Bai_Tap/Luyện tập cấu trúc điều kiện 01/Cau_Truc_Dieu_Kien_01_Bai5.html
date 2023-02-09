@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng</title>
+</head>
+<body>
+<h3>Xếp hạng học lực sinh viên</h3>
+<p>Nhập điểm vào ô trống </p>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+    <script>
+        function doNoth() {
+            var number = parseFloat(document.getElementById('input').value);
+            if(isNaN(number) || number > 10){
+                document.getElementById('out').innerText= "Bạn đã nhập sai ";
+            }else{
+                if(number <= 10 && number >=9){
+                    document.getElementById('out').innerText = "Bạn đạt danh hiệu học sinh xuất sắc";
+                }else if(number >= 8){
+                    document.getElementById('out').innerText = "Bạn đạt danh hiệu học sinh giỏi";
+                }else if(number >= 6.5){
+                    document.getElementById('out').innerText = "Bạn đạt danh hiệu học sinh khá";
+                }else if(number >= 5){
+                    document.getElementById('out').innerText = "Bạn đạt danh hiệu học sinh trung bình";
+                }else{
+                    document.getElementById('out').innerText = "Bạn đạt danh hiệu học sinh yếu";
+                }
+            }
+        }
+    </script>
+</html>

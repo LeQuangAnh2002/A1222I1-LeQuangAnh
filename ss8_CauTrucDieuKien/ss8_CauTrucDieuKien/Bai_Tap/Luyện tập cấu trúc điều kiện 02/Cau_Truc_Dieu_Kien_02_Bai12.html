@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let soTienLuong=parseFloat(prompt('Nhap tien luong moi thang: '));
+    if (soTienLuong>=20000000){
+        tienThue=(soTienLuong*20)/100;
+    } else if(soTienLuong>=15000000) {
+        tienThue=(soTienLuong*15)/100
+    } else if(soTienLuong>=10000000) {
+        tienThue=(soTienLuong*10)/100;
+    } else if(soTienLuong>=5000000) {
+        tienThue=(soTienLuong*5)/100;
+    } else {
+        tienThue=(soTienLuong*0)/100;
+    }
+    alert('số tiền thuế của bạn mỗi tháng là: '+ tienThue+' VND');
+</script>
