@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let num;
+    do{
+        num = prompt("Nhập giá trị vào")
+        for (let i = 1; i < num;i++){
+            if(i % 3 === 0){
+                document.write(i +" Các số chia hết <span style='color: red'>3</span>"+"<br>")
+            }else if(i % 5===0){
+                document.write(i +" Các số chia hết <span style='color: blue'>5</span>"+"<br>")
+            }
+
+        }
+
+    }while (num > 100 || num < 1)
+</script>
+</body>
+</html>

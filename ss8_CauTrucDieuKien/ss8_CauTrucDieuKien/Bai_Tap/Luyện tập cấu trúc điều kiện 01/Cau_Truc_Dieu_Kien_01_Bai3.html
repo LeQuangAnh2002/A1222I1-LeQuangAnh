@@ -17,10 +17,11 @@
             if(isNaN(nhapSo)){
                 document.getElementById('out').innerText = "Không phải dạng số";
             }else{
-                if(nhapSo <= 0){
-                    document.getElementById('out').innerText =nhapSo +  " Là số bé hơn 0";
-                }else{
+                if(nhapSo >= 0){
                     document.getElementById('out').innerText =nhapSo +  " Là số lớn hơn 0";
+                }else{
+                    document.getElementById('out').innerText =nhapSo +  " Là số bé hơn 0";
+
                 }
             }
         }

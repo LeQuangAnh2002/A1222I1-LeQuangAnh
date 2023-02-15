@@ -15,11 +15,16 @@
     function doNoth() {
         var soA = document.getElementById('input').value;
         var dienTich = soA * soA;
-        if(isNaN(dienTich) || dienTich < 0){
+        if(isNaN(dienTich)){
             document.getElementById('out').innerText = "Mời bạn nhập lại";
 
         }else{
-            document.getElementById('out').innerText ='cạnh a nhập vào ' + soA + " diện tích hình vuông là " + dienTich + 'cm';
+            if(soA <= 0){
+                document.getElementById('out').innerText = "giá trị nhập vào phải lớn hơn 0";
+            }else{
+                document.getElementById('out').innerText ='cạnh a nhập vào là ' + soA + " và diện tích hình vuông là " + dienTich + 'cm';
+            }
+            //
         }
 
     }

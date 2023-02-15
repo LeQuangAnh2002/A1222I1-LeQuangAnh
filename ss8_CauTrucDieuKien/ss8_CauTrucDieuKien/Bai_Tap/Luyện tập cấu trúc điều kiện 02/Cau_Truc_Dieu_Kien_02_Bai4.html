@@ -19,11 +19,16 @@
         var soA = document.getElementById('input1').value;
         var soB = document.getElementById('input2').value;
         var dienTich = soA * soB;
-        if(isNaN(dienTich) || dienTich < 0){
+        if(isNaN(soA) || isNaN(soB)){
             document.getElementById('out').innerText = "Mời bạn nhập lại";
 
         }else{
-            document.getElementById('out').innerText =" diện tích hình vuông là " + dienTich + ' cm';
+            if(soA=="" || soB ==""){
+                document.getElementById('out').innerText = "Không được để trống";
+            }else{
+                document.getElementById('out').innerText = "Diện tích của hình chữ nhật là " + dienTich;
+            }
+
         }
 
     }

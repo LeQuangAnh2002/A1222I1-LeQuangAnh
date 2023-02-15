@@ -23,7 +23,7 @@
             var nhapC = document.getElementById('inputC').value;
             var max;
 
-            if( nhapA < 0 && nhapB < 0 && nhapC < 0){
+            if( nhapA < 0 || nhapB < 0 || nhapC < 0){
                 document.getElementById('out').innerText = "Gía trị A,B,C nhập vào phải lớn hơn 0";
 
             }else{

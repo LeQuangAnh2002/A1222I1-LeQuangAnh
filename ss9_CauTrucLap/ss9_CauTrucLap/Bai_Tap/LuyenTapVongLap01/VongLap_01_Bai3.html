@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    // số fibonacci là gì số trước của nó sẽ bằng tổng 2 số sau: 1,1,2,3,5,8,13,21,34,55,89,144,233,377,610-->
+<!--    // phần tử số 2 = phần  tử 0 + phần tử 1-->
+    <script>
+        var f1=0,f2=1;
+        var num = prompt("Nhập số vòng :");
+
+        for(var i= 0; i< num;i++){
+
+            var fn = Number(f1) + Number(f2);
+            //sau khi cộng f1+ f2 = fn mang giá trị 1
+            //in ra màn hình
+            document.write(fn+"<Br>");
+                //f1 lúc này sẽ dc gán của giá trị f2 = 1
+                f1 = f2;
+                //f2 nhận giá trị của fn = 1
+                f2 = fn;
+        }
+
+    </script>
+
+</body>
+</html>

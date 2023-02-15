@@ -13,15 +13,20 @@
     <script>
         function doNoth() {
             var tuoi = document.getElementById('input').value;
-            if( tuoi <= 0){
-                document.getElementById('out').innerText = "Tuổi phải lớn hơn 0";
-            }else{
-                if( tuoi >= 15  ){
+            if( isNaN(tuoi)){ // nếu biến tuoi nhập vào là ko phải là number sẻ trả giá trị True còn nếu giá trị nhập vào là number thì sẽ trả về giá trị false
+                document.getElementById('out').innerText = "giá trị không phải là number";
 
+            }else{
+                if( tuoi >= 15 ){
                     document.getElementById('out').innerText = "Bạn đủ điều kiện vào lớp 10";
+
                 }else{
                     document.getElementById('out').innerText = "Bạn không đủ điều kiện vào lớp 10";
+
+
+
                 }
+
             }
         }
 

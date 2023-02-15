@@ -13,13 +13,19 @@
 </body>
     <script>
         function doNoth() {
-            var met = document.getElementById('input').value;
+            var met = parseInt(document.getElementById('input').value);
             var chuyenDoi = met * 3.2808;
-            if(isNaN(met) || met < 0){
+            if(isNaN(met)){
                 document.getElementById('out').innerText = "Mời bạn nhập lại";
 
             }else{
-                document.getElementById('out').innerText = met + " mét đổi qua feet là " + chuyenDoi;
+                if( met <= 0){
+                    document.getElementById('out').innerText = "number phải lớn hơn 0";
+                }else{
+                    document.getElementById('out').innerText = met + " mét đổi qua feet là " + chuyenDoi;
+                }
+                // document.getElementById('out').innerText = met + " mét đổi qua feet là " + chuyenDoi;
+
             }
 
         }
