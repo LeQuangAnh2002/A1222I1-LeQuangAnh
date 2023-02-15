@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài  toán bảng cữu chương-->
+<!--    <script>-->
+<!--        for(var i = 1; i <=10; i++){-->
+<!--            document.write( "Bảng cửu chương " + i + "<br>")-->
+<!--            for(var j = 1; j <= 9 ; j++){-->
+<!--                document.write(i+ " x "+ j + " = "+ i*j + "<br>" )-->
+<!--            }-->
+<!--        }-->
+
+<!--    </script>-->
+
+<!-- Bài 2-->
+<!--    <script>-->
+<!--        for(var i = 1 ; i < 100;i++){-->
+<!--            if(i == "99"){-->
+<!--                document.write(i + " Hoàn thành" )-->
+<!--            }else{-->
+<!--                document.write(i + "<br>")-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 3-->
+
+<!--    <script>-->
+<!--        var num;-->
+<!--        do{-->
+<!--            num = prompt("Nhập nhiệt độ vào")-->
+<!--            if(num > 100){-->
+<!--                alert("Hạ nhiệt độ xuống")-->
+<!--            }else if(num < 20){-->
+<!--                alert("Tăng nhiệt độ lên")-->
+<!--            }else{-->
+<!--                alert("Nhiệt độ ổn định " + num + " C ")-->
+<!--            }-->
+
+
+
+<!--        }while (num > 100 || num < 20)-->
+<!--    </script>-->
+
+<!--Bài 4  Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<!--<script>-->
+<!--    var f1=0, f2=1;-->
+<!--    var num = prompt("Nhập số vòng lặp:")-->
+<!--    for(var i = 0; i < num; i++){-->
+<!--        var fn = Number(f1) + Number(f2);-->
+<!--        document.write(fn+ "<br>")-->
+<!--        f1 = f2-->
+<!--        f2 = fn-->
+
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 5:Tìm số đầu tiên trong dãy fibonacci chia hết cho 5-->
+<!--    <script>-->
+<!--        var f1=0,f2=1;-->
+<!--        var num = prompt("Nhập số vòng")-->
+<!--        for(var i = 0;i < num;i++){-->
+<!--            var fn = Number(f1) + Number(f2)-->
+<!--            if(fn % 5==0){-->
+<!--                document.write(fn+ "<br>")-->
+<!--            }-->
+<!--            f1 = f2-->
+<!--            f2 = fn-->
+<!--        }-->
+<!--    </script>-->
+
+<!--Bài 8 game đoán số-->
+<!-- dùng hàm Math.round() có chức năng làm tròn số,phương thức sẽ trả về số nguyên gần nhất với số được cung cấp khi gọi phương thức-->
+<!--hương thức Math.random() trả về một số ngẫu nhiên giữa 0 (inclusive-bao gồm) và 1 (exclusive-ngoại trừ):-->
+<script>
+        let num ;
+        let x = Math.round(Math.random() * 10)
+
+            do{
+                num  = prompt("Nhập số dự đoán :")
+                if(num == x){
+                    alert("Chúc mừng bạn đã đoán đúng")
+                }else if( num < x){
+                    alert("Số của bạn nhỏ hơn số bí mật")
+                }else if( num > x) {
+                    alert("Số của bạn lớn hơn số bí mật")
+                }
+            }while (num > 11 || num < 0)
+
+
+</script>
+</body>
+</html>

@@ -8,13 +8,13 @@
     <script>
           let nhietDo;
           do {
-            nhietDo = + prompt("Nhập vào 1 số:");
+            nhietDo = +prompt("Nhập vào 1 số:");
             if(nhietDo > 100){
                 alert("Giảm nhiệt độ ")
             }else if(nhietDo < 20){
                 alert("Tăng nhiệt độ")
             }else {
-                document.write(nhietDo)
+                document.write(nhietDo+ " Nhiệt độ hợp lệ")
             }
           }while (nhietDo > 100 || nhietDo < 20)
     </script>

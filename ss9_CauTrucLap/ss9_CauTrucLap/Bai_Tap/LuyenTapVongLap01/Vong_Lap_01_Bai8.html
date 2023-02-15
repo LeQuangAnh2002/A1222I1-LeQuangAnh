@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num ;
+    let x = Math.round(Math.random() * 10)
+
+    do{
+        num  = prompt("Nhập số dự đoán :")
+        if(num == x){
+            alert("Chúc mừng bạn đã đoán đúng")
+        }else if( num < x){
+            alert("Số của bạn nhỏ hơn số bí mật")
+        }else if( num > x) {
+            alert("Số của bạn lớn hơn số bí mật")
+        }
+    }while (num > 11 || num < 0)
+
+
+</script>
+</body>
+</html>
