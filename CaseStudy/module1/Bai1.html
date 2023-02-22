@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="doNoth()">Click Me</button>
+    <p id="out"></p>
+    <script>
+        function doNoth() {
+            let luong = document.getElementById('input').value;
+            if(luong < 7000000){
+                thue = Number(luong) * (5/100)
+                document.getElementById("out").innerText = luong + " tiền lương bạn phải trả " + thue + " Ngàn"
+            }else if(luong < 10000000){
+                thue = Number(luong) * (10/100)
+                document.getElementById("out").innerText = luong + " tiền lương bạn phải trả " + thue + " Ngàn"
+            }else{
+                thue = Number(luong) * (20/100)
+                document.getElementById("out").innerText = luong + " tiền lương bạn phải trả " + thue + " Ngàn"
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a = ["code"]
+        var b = ["gym"]
+        var c = a.concat(b)
+        console.log(c)
+        // tạo mảng student chưa 2 đối tượng có id 1 và 2
+        // tiếp tục tạo mảng student2 chứa 2 đối tượng có id 3 và 4
+        // sử dụng hàm concat để nối mang student  và student2
+        // khao báo mảng newArray để chứa sau khi nối student và student2
+        var students = [
+            {
+                id : 1,
+                name: "Nguyen Van An",
+                address: "Ha Noi"
+            }, {
+                id : 2,
+                name: "Nguyen Van Nam",
+                address: "Ha Nam"
+            }]
+        var students2 = [
+            {
+                id : 3,
+                name: "Long",
+                address: "Ha binh"
+            }, {
+                id : 4,
+                name: "Bao",
+                address: "Ha trung"
+            }]
+    var newArray =students.concat(students2)
+        console.log(newArray)
+    </script>
+
+</body>
+</html>

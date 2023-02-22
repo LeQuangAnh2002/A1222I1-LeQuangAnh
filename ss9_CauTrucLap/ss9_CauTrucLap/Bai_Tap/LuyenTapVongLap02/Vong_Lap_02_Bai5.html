@@ -10,15 +10,15 @@
     let sothang =parseInt(prompt("Nhập số tháng cho vay: "));
 
     let tienlai=0;
-    let tongtienlai= tienlai;
+    let tongtienlai = tienlai;
     document.write("Số tiền đã vay là:" +' ' + sotien + "VNĐ cho" +' '+ sothang + " tháng với lãi suất 10%/năm" + "<br>");
     for (let i = 0; i <sothang ; i++) {
         tienlai=(sotien*(10/100))/12;
-        tongtienlai += tienlai;
-        sotien += tienlai;
-        document.write("Tiền lãi của tháng " + (i + 1) + " là: " + tienlai + " VNĐ <br>");
+        tongtienlai = tongtienlai + tienlai;
+        // sotien += tienlai;
+        document.write("Tiền lãi của tháng " + (i + 1) + " là: " + Number(tienlai) + " VNĐ <br>");
     }
-    document.write("Tổng tiền lãi trong " + sothang + " tháng là: " + tongtienlai + "VNĐ <br>");
+    document.write("Tổng tiền lãi trong " + sothang + " tháng là: " + Number(tongtienlai) + "VNĐ <br>");
 </script>
 </body>
 </html>

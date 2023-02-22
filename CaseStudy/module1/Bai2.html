@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="doNoth()">Click Me</button>
+<p id="out"></p>
+</body>
+<script>
+    function doNoth() {
+     var chu = document.getElementById('input').value;
+     if( chu === "o" || chu === "u" || chu === "i"|| chu === "a" || chu === "e"){
+         document.getElementById('out').innerText = chu + " là nguyên âm"
+     }else{
+         document.getElementById('out').innerText = chu + " là phụ âm"
+     }
+
+    }
+</script>
+</html>

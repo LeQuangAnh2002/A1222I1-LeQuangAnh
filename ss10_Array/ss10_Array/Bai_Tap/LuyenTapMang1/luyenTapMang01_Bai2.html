@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--        Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.-->
+    <input type="text" id="numberInput">
+    <input type="button" onclick="addNumber()" value="ADD">
+    <input type="button" onclick="displayNumber()" value="DISPLAY">
+    <div id="out"></div>
+    <script>
+        let a = []
+        let x = 0
+        let max = 0;
+        index = 0;
+        function addNumber(){
+
+            a[x] = document.getElementById('numberInput').value;
+            alert("Element " + a[x] + " nằm tại vị trí " + x);
+            x++
+            document.getElementById('numberInput').value = '';
+        }
+
+        function displayNumber() {
+            // let e = "<hr>";
+            // for(let j = 0 ; j < a.length;j++){
+            //     e += "Element " + j + " = " + a[j]+"<br>";
+            // }
+            // document.getElementById("out").innerHTML = e;
+            for(let i = 0 ; i < a.length;i++){
+
+                if( max < a[i]){
+                    max = a[i];
+                    index = i;
+                }
+
+            }
+
+            document.write( max + " Nằm tại vị trí "+ index+"<br>")
+        }
+        displayNumber();
+
+    </script>
+</body>
+</html>

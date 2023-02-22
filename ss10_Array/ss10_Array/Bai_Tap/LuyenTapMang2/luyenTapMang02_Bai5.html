@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a=[]
+        let b=[]
+        let c= prompt("Nhập vao MANG 1:")
+        let d = prompt("Nhập vào MANG 2:")
+        let count = 0;
+        for(let i = 0; i < c.length;i++){
+            a[i] = c.slice(0)//copy mảng bằng cách slice(0)
+        }
+        for(let j= 0 ; j < d.length;j++){
+            b[j] = d.slice(0)
+        }
+        for(let j=0; j < d.length;j++){
+            if(a[j] !== b[j]){
+                alert("2 chuỗi khác nhau")
+                break
+            }else{
+                alert("2 CHUỖI GIỐNG NHAU")
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

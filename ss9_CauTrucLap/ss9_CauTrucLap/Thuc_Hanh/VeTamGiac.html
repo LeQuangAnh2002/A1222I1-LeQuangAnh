@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <script>-->
+<!--        var m = prompt("Nhập chiều cao ")-->
+<!--        // var n = prompt("Nhập chiều dài ")-->
+<!--        //for đầu tiên yên ra chiều cao của tam giác-->
+<!--        for (var i = 1 ; i <= m;i++){-->
+<!--         // for thứ 2 in ra số dấu sao trên mỗi dòng có số lượng = i-->
+<!--            for(var j=1;j <=i;j++) {-->
+<!--                document.write("*")-->
+<!--            }-->
+<!--            document.write("<br>")-->
+<!--        }-->
+<!--    </script>-->
+
+<!--<script>-->
+<!--    &lt;!&ndash;Tam giác vuông cân  &ndash;&gt;-->
+<!--    //dùng công thứ i*2 - 1-->
+<!--    // i = 1 => 1*2 - 1 => 1 dấu sao-->
+<!--    //i = 2 => 2*2 - 1 => 3 dấu sao-->
+<!--    // i = 3 => 3*2 - 1 => 5 dấu sao-->
+<!--    // i = 4 => 4*2 - 1 => 7 dấu sao-->
+<!--    var m = prompt("Nhập chiều cao ")-->
+
+<!--    //for đầu tiên yên ra chiều cao của tam giác-->
+<!--    for (var i = 1 ; i <= m;i++){-->
+<!--        // vòng for này dùng để căn giữa tam giác-->
+<!--        for(var k = m ; k > i;k&#45;&#45;){-->
+<!--            document.write("&nbsp&nbsp")-->
+<!--        }-->
+
+<!--        // for thứ 2 in ra số dấu sao trên mỗi dòng có số lượng dấu sao theo công thức i *2 -1-->
+<!--        for(var j=1;j <=i * 2 - 1;j++) {-->
+<!--            document.write("*")-->
+<!--        }-->
+<!--        document.write("<br>")-->
+<!--    }-->
+<!--</script>-->
+
+<script>
+    <!--Tam giác vuông cân  -->
+    //dùng công thứ i*2 - 1
+    // i = 1 => 1*2 - 1 => 1 dấu sao
+    //i = 2 => 2*2 - 1 => 3 dấu sao
+    // i = 3 => 3*2 - 1 => 5 dấu sao
+    // i = 4 => 4*2 - 1 => 7 dấu sao
+    var m = prompt("Nhập chiều cao ")
+
+    //for đầu tiên yên ra chiều cao của tam giác
+    for (var i = 1 ; i <= m;i++){
+        // vòng for này dùng để căn giữa tam giác
+        for(var k = m ; k > i;k--){
+            document.write("&nbsp&nbsp")
+        }
+
+        // for thứ 2 in ra số dấu sao trên mỗi dòng có số lượng dấu sao theo công thức i *2 -1
+        var x = i * 2 -1
+        for(var j=1 ; j <= x;j++) {
+            if(i == 1 || i == m|| j==1 || j == x  ){
+                document.write("*")
+            }else{
+                document.write("&nbsp&nbsp")
+
+            }
+
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

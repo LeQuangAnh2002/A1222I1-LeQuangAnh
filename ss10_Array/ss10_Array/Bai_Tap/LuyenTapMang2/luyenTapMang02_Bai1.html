@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = [
+            [1,2,3,24],
+            [8,11,9,4],
+            [7,0,5,27],
+            [7,5,6,78]
+
+
+        ]
+        // Lặp theo hàng
+        for(var i = 0; i < a.length;i++){
+                document.write("<br>" +"Cột " + i + "<br>")
+            // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+            for(j = 0; j < a[i].length;j++){
+                document.write(""+a[i][j]+"<BR>")
+            }
+        }
+    </script>
+</body>
+</html>

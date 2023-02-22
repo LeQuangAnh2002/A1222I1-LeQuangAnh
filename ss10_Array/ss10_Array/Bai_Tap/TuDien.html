@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text" placeholder="Nhap Tu Can Tra">
+<button type="button" onclick="find()">Search</button>
+<br>
+<input type="text" id="result" placeholder="Ket Qua">
+<script>
+    function find() {
+        let tiengAnh = ["dog", "cat", "chicken", "tiger", "bear", "buffalo"];
+        let tiengViet = ["Chó", "Mèo", "Gà", "Hổ", "Gấu", "Trâu"];
+        let findWord = document.getElementById("input").value;
+        let result = document.getElementById("result");
+        findWord = findWord.toLowerCase();
+        let flat = -1;
+        flat = tiengAnh.indexOf(findWord);
+        if (flat == -1) {
+            result.value = "Khong Co Tu Nay";
+        } else {
+            result.value = tiengViet[flat];
+        }
+    }
+
+
+</script>
+</body>
+</html>

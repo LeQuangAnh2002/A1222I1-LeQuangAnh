@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+    <script>
+        let array = [12,34,54,65,76,87,8,78,23,45,23];
+        let count = 0;
+        let average = 0;
+        for (let i = 0; i < array.length;i++){
+            count = count + array[i]
+            average = count / 2
+            document.write( array[i]+ " ")
+
+
+
+
+        }
+        document.write("<br>"+"Tổng giá trị các phần tử: " + count)
+        document.write("<br>"+"Trung bình cộng: " + average)
+
+    </script>
+</body>
+</html>

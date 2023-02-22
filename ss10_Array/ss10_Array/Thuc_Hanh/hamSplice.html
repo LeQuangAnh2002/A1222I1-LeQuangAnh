@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // var array = ["code","gym","vn"]
+        // alert(array)
+        // // tham số của splice(vi trí bắt đầu xóa trong mảng,số lượng phần tử cần xóa )
+        //  array.splice(1,1)
+        // alert(array)
+
+        var students = [
+        {
+                id : 1,
+                name: "Nguyen Van An",
+                address: "Ha Noi"
+        }, {
+                id : 2,
+                name: "Nguyen Van Nam",
+                address: "Ha Nam"
+        }
+        ]
+        console.log(students)
+        for(var i = 0; i < students.length;i++){
+            if(students[i].id == 2){
+                students.splice(i,1);
+            }
+        }
+    </script>
+</body>
+</html>

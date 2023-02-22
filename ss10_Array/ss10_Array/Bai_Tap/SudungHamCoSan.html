@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    Bài 1:Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi như sau: myColor = ["Red", "Green", "White", "Black"];-->
+    <script>
+        let array = ["Red","Green","White","Black",12]
+        alert(array.join(","))
+    </script>
+
+<!--<script>-->
+
+<!--Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.-->
+<!--    //khai báo biến num-->
+<!--    const num=window.prompt();-->
+<!--    const str = num.toString();-->
+<!--    const result = [str[0]];-->
+
+<!--    for(let x=1; x < str.length; x++)-->
+<!--    {-->
+<!--        //0-254-6-8-->
+<!--        if((str[x-1]%2 === 0)&& (str[x]%2===0))-->
+<!--        {-->
+<!--            result.push('-',str[x]);-->
+<!--        }-->
+<!--        else-->
+<!--        {-->
+<!--            result.push(str[x]);-->
+<!--        }-->
+<!--    }-->
+<!--    alert(result.join(''))-->
+<!--</script>-->
+
+<!--Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa. Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của chương trình là 'tHE qUICK bROWN fOX'.-->
+<!--    <script>-->
+<!--        //khai báo biến str = m-->
+<!--        var str = prompt("Nhập");-->
+<!--        //khai báo biến UPPER chữ hoa-->
+<!--        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';-->
+<!--        //khai báo biến LOWER chữ thường-->
+<!--        var LOWER = 'abcdefghijklmnopqrstuvwxyz';-->
+<!--        // khai báo 1 biến result trống-->
+<!--        var result = [];-->
+<!--        //chạy vòng for với biến khởi tạo là x = 0; điều kiện x < độ của mảng str.length-->
+
+<!--        for(var x=0; x<str.length; x++)-->
+<!--        {-->
+<!--            //kiểm tra trong biến UPPER bằng hàng index of kiểm tra vị trí mảng str[x] !== -1-->
+<!--            if(UPPER.indexOf(str[x]) !== -1)-->
+<!--            {-->
+<!--                //thực hiện đổi value trong mảng str[x] bằng toLowerCase() thành chữ thường và add vào mảng result bằng hàm push()-->
+<!--                result.push(str[x].toLowerCase());-->
+<!--            }-->
+
+<!--            else if(LOWER.indexOf(str[x]) !== -1)-->
+<!--            {-->
+<!--                result.push(str[x].toUpperCase());-->
+<!--            }-->
+<!--            else-->
+<!--            {-->
+<!--                result.push(str[x]);-->
+<!--            }-->
+<!--        }-->
+<!--        alert(result.join(''));-->
+
+<!--    </script>-->
+</body>
+</html>

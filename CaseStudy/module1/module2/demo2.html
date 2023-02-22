@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
+<!--<script>-->
+<!--    let a = prompt("Nhập số a: ")-->
+<!--    let b = prompt("Nhập số b :")-->
+<!--    if(a % b ==0){-->
+<!--        alert("a chia hết cho b")-->
+
+<!--    }else{-->
+<!--        alert(" a không chi hết b")-->
+<!--    }-->
+
+
+
+<!--</script>-->
+
+<!--Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.-->
+<!--<script>-->
+<!--    let a = prompt("Nhập số a : ")-->
+
+<!--    if( a < 15 ){-->
+<!--        alert("Bạn chưa đủ tuổi vào lớp 10")-->
+<!--    }else{-->
+<!--        alert("Bạn đã đủ tuổi vào lớp 10")-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0-->
+<!--<script>-->
+<!--    let a = prompt("Nhập một số bất kì")-->
+<!--    if( a > 0){-->
+<!--        alert(a+ " lớn hơn 0")-->
+<!--    }else{-->
+<!--        alert(a+ " bé hơn 0")-->
+<!--    }-->
+
+<!--</script>-->
+
+<!--Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+<!--<script>-->
+<!--    let a = prompt("Nhập số thứ 1: ")-->
+<!--    let b = prompt("Nhập số thứ 2: ")-->
+<!--    let c = prompt("Nhập số thứ 3: ")-->
+
+
+<!--    if( a > b && a > c){-->
+<!--        alert(a+ " là số lớn nhất")-->
+<!--    }else if(b > a && b > c){-->
+
+<!--        alert(b+" là số lớn nhất")-->
+<!--    }else{-->
+<!--        alert(c+" là số lớn nhất")-->
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+<!--<script>-->
+<!--    let diem = parseFloat(prompt("Nhập số điểm vào :"))-->
+<!--    if(isNaN(diem)){-->
+<!--        alert("Mời bạn nhập lại giá trị")-->
+<!--    }else{-->
+<!--        if( diem <= 10 && diem >= 9){-->
+<!--            alert(diem +" xuất sắc")-->
+<!--        }else if(diem >= 8){-->
+<!--            alert("giỏi")-->
+<!--        }else if(diem >= 6.5){-->
+<!--            alert("khá")-->
+<!--        }else if(diem >=5){-->
+<!--            alert("trung bình")-->
+<!--        }else {-->
+<!--            alert("yếu")-->
+<!--        }-->
+
+<!--    }-->
+<!--</script>-->
+
+<!--Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng-->
+<script>
+    let doanhthu = prompt("Nhập doanh thu vào : ")
+    let hoaHong;
+    if(isNaN(doanhthu)){
+        alert("Bạn đã nhập sai giá trị(bắt buộc phải nhập number)")
+
+    }else{
+        if(doanhthu <= 1000000){
+             hoaHong = doanhthu * (10/100)
+            alert("Doanh thu thấp hơn 1 triệu bạn nhận được" + hoaHong + " ngàn tiền hoa hồng")
+        }else if(doanhthu <= 5000000){
+            hoaHong = doanhthu * (20/100)
+            alert("Doanh thu thấp hơn 5 triệu bạn nhận được " + hoaHong + " ngàn tiền hoa hồng ")
+
+        }
+
+    }
+
+</script>
+</body>
+</html>
