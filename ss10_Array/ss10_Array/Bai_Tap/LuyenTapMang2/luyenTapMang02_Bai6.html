@@ -7,14 +7,16 @@
 <body>
     <script>
         let str =prompt("Nhập vào chuỗi bất kỳ")
-        let array =[]
+        let array =[];
+
         for (let i=0; i < str.length;i++){
             array[i]= str.slice(i,i+1)
             if(array[i] ==='-'){
                 array.splice(i,1,'_')
             }
         }
-        document.write(array.join(""))
+
+        document.write(array.join(""));
     </script>
 </body>
 </html>

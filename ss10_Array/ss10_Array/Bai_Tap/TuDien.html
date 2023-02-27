@@ -17,11 +17,11 @@
         let result = document.getElementById("result");
         findWord = findWord.toLowerCase();
         let flat = -1;
-        flat = tiengAnh.indexOf(findWord);
-        if (flat == -1) {
+        flag = tiengAnh.indexOf(findWord);
+        if (flag == -1) {
             result.value = "Khong Co Tu Nay";
         } else {
-            result.value = tiengViet[flat];
+            result.value = tiengViet[flag];
         }
     }
 

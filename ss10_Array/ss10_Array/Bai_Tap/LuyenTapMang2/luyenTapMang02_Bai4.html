@@ -7,14 +7,16 @@
 <body>
     <script>
 
-        let b = prompt("Nhập số mảng ký tự vào ")
+        let b = prompt("Nhập số mảng ký tự vào ");
         let count = 0;
         for(let i =0 ; i < b.length;i++){
-            if( b[i] !== '' || b[i] === ''){
-                count++
+
+            if( b[i] !== ''){
+                count++;
             }
         }
-        alert(count)
+        alert(b);
+        alert(count);
     </script>
 </body>
 </html>
