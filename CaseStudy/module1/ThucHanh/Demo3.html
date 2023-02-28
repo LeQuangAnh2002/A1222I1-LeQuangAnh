@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.-->
+    <script>
+        let a =[124,344,534,635,736,387,23,655,837,132,433]
+        let tong = 0;
+        let max = 0;
+        for(let i =0; i < a.length;i++){
+            if(max < a[i]){
+                max = a[i]
+            }
+
+        }
+        document.write(max+"<br>")
+
+        let dem = 0;
+        for(let i =0; i < a.length;i++){
+            if(a[i] > 0){
+                tong +=a[i]
+                dem++;
+            }
+        }
+        document.write(tong+"<br>")
+        let tb= 0;
+        for(let i =0;i < a.length;i++){
+            if(dem > 0){
+                tb = tong/dem
+            }
+        }
+        document.write(tb)
+    </script>
 </body>
 </html>

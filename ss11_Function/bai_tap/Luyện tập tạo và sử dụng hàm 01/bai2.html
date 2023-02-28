@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <input type="number" id="number1">
+    <input type="button" onclick="isClickMe()" value="ClickMe">
+    <p id="out"></p>
+    <script>
+
+        function isClickMe() {
+           let one =  +document.getElementById('number1'). value;
+           document.getElementById('out').innerText = one + 1;
+           document.getElementById('number1').value = " ";
+        }
+
+    </script>
 </body>
 </html>

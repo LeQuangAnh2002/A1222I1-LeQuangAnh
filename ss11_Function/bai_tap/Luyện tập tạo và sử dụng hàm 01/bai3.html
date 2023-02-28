@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <input type="button" onclick="isNumbers()" value="ClickMe">
+    <p id="out"></p>
+    <script >
+
+            function isNumbers() {
+                let num1 = +parseInt(document.getElementById('number1').value);
+                let num2 = +parseInt(document.getElementById('number2').value);
+            if(num1 > num2){
+                alert("số thứ nhất lớn hơn số thứ 2")
+            }else if(num1 < num2 || num1 === num2){
+                alert("Tổng 2 số là = "+ (Number(num1) + Number(num2)))
+            }
+            }
+
+
+    </script>
+
 </body>
 </html>

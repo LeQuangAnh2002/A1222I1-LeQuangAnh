@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = []
+        let b = []
+        let c = prompt("Nhập mảng 1")
+        let d = prompt("Nhập mảng 2")
+        let kiemTra = true
+        for(let i = 0;i < c.length;i++){
+            a[i] = c.slice(i,i+1) // Copy toàn bộ mảng
+        }
+        for(let j = 0; j < d.length;j++){
+            b[j] = d.slice(j,j+1)
+        }
+        for(let j = 0 ; j< d.length;j++){
+            if(a[j] !== b[j]){
+                kiemTra = false
+                alert("2 mảng khác nhau")
+                break
+            }
+        }
+        if(kiemTra === true){
+            alert("2 mảng giống nhau")
+        }
+
+    </script>
 </body>
 </html>

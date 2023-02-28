@@ -1,10 +1,66 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>-->
+
+<!--    function processConfirm(answer) {-->
+<!--        let result = "";-->
+<!--        if (answer) {-->
+<!--            result = "Excellent. We'll play a nice game of chess.";-->
+<!--        } else {-->
+<!--            result = "Maybe later then.";-->
+<!--        }-->
+<!--        return result;-->
+<!--    }-->
+
+<!--    let confirmAnswer = confirm("Shall we play a game?");-->
+<!--    let theAnswer = processConfirm(confirmAnswer);-->
+<!--    alert(theAnswer);-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<!--<form>-->
+<!--    <p>-->
+<!--        <label>Fahrenheit</label>-->
+<!--        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"-->
+<!--               oninput="temperatureConverter(this.value)"-->
+<!--               onchange="temperatureConverter(this.value)">-->
+<!--    </p>-->
+<!--    <p>Celsius: <span id="outputCelsius"></span></p>-->
+<!--</form>-->
+
+<script>
+
+    // function temperatureConverter(valNum) {
+    //     valNum = parseFloat(valNum);
+    //     document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+    // }
+    let a = [3,2,5,6,27,-1,5,6]
+    function minArray(arr) {
+        let max = arr[0];
+        for(let i = 0; i < arr.length;i++){
+            if(arr[i] > max ){
+                max = a[i];
+            }
+        }
+        return max;
+    }
+    let min1 = minArray(a)
+    alert(min1)
+</script>
 </body>
 </html>

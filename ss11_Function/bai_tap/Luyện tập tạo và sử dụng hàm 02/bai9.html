@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function isNumber(element) {
+            let a = [11,12,13,23,23,45,56,23,345,4,3,234,11,12,13,23,22]
+            let count = 0;
+            for (let i=0;i < a.length;i++){
+                if( element === a[i]){
+                        count ++;
+                }
+            }
+            return count;
+            if(count === 0){
+                return  - 1;
+            }
+        }
+        let a = parseInt(prompt());
+        alert("kiểm tra kí tự "+isNumber(a));
+
+
+    </script>
+</body>
+</html>

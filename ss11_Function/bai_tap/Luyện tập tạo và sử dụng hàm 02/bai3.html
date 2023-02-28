@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--giai thừa của 5 là 1*2*3*4*5 = 120-->
+
+    <script>
+
+
+        function giaiThua(number) {
+            let sum = 1;
+            for (let i = 1; i <= number;i++){
+                sum *= i;
+            }
+          return sum;
+
+        }
+        let a = prompt('Nhập giai thừa vào')
+        let z = giaiThua(a)
+        alert(z)
+
+
+
+
+    </script>
+</body>
+</html>

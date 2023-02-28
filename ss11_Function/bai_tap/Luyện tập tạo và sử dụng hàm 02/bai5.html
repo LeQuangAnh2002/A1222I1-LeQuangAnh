@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function isNumber(num1,num2,num3) {
+            if(num1 > num2 && num1 > num3){
+                return 1 ;
+
+            }else if(num2 > num1 && num2 > 3){
+                return  2;
+            }else{
+                return 3
+            }
+    }
+    var a = parseInt(prompt("Nhập vào số đầu tiên"));
+    var b = parseInt(prompt("Nhập vào số thứ hai"));
+    var c = parseInt(prompt("Nhập vào số thứ ba"));
+    var flag = isNumber(a,b,c)
+
+    if(flag == 1){
+        alert("Số thứ nhất lớn nhất");
+    }else if(flag == 2){
+        alert("Số thứ hai lớn nhất");
+    }else{
+        alert("Số thứ ba zlớn nhất");
+    }
+</script>
 </body>
 </html>

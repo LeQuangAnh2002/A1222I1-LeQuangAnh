@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = [11,12,22,33,44,55,66,77,88,99,14]
+        let b = parseInt(prompt("Nhập giá trị cần so sánh"))
+        let k=0;
+
+        for (let i = 0; i < 11 ; i++){
+           if(b === a[i]){
+               alert("V is in the array");
+          }else{
+               //tăng biến đếm lên nếu b kiểm tra trong mảng ko tồn tại sẽ tăng biến đếm lên
+               k++;
+           }
+           if(k === 11){
+               alert("V is not in the array")
+           }
+         }
+
+
+    </script>
 </body>
 </html>

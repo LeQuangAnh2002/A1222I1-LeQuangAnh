@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+    <script>
+        let a =[];
+        let b = prompt("Nhập độ dài của mảng ")
+        for (let i =0;i < b;i++){
+            a[i] = parseInt(prompt("Nhập mảng kí tự vào "+ (i+1)))
+        }
+        document.write(a+"<br>")
+        document.write(a.reverse())
+
+
+    </script>
 </body>
 </html>

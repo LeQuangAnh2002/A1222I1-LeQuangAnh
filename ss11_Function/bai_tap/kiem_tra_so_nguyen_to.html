@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        for (let i = 2; i < 1000;i++){
+            if(isNumber(i)){
+                document.write(i + "<br>")
+            }
+        }
+
+
+        function isNumber(number) {
+            if(number < 2){
+                return false;
+            }
+            for(let i = 2 ; i < number;i++){
+                if(number % i ===0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    </script>
+
 </body>
 </html>

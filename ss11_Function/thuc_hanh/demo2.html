@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form action="">
+    <p>
+        <label for="inputFahrenheit">Fahenheit</label>
+        <input id="inputFahrenheit" type="number" oninput="temperatureConverter()">
+
+    </p>
+    <p>
+        Celsius: <span id="outputCelsius"></span>
+    </p>
+
+</form>
+    <script>
+        function temperatureConverter() {
+            let value = parseFloat(document.getElementById("inputFahrenheit").value);
+            document.getElementById("outputCelsius").innerHTML = (value - 32) / 1.8;
+        }
+    </script>
 </body>
 </html>

@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let Array=[
+            [12,34,54],
+            [32,54,76],
+            [43,54,56]
+        ]
+
+        for(let i = 0;i < Array.length;i++){
+            document.write("<br>"+"Cột " + i+ "<br>")
+            for(let j = 0; j< Array[i].length;j++){
+                document.write(Array[i][j]+"<br>")
+            }
+        }
+    </script>
 </body>
 </html>

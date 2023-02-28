@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let starrs = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+        let starrs2 = ['Ursa','Mino','Tarurus','Cygnus','Lyra','Aquila','Ursa','Major','Leo'];
+
+        function xyLy(stass) {
+            for (let i = 0;i <  starrs.length;i++){
+                if(stass === starrs[1]){
+                    document.write(starrs2[i])
+                }else{
+                    document.write("Không tìm thấy ngôi sao phù hợp")
+                    break;
+                }
+            }
+        }
+        let sao = prompt("Nhập chòm sao cần tìm")
+        xyLy(sao)
+    </script>
+
 </body>
 </html>

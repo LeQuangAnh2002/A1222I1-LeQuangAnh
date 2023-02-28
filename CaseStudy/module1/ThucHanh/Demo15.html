@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = prompt("Nhập chuổi vào");
+        let b = [];
+
+        for(let i = 0; i < a.length;i++){
+            b[i] = a.slice(i,i+1)
+            if(b[i] === '-'){
+                b.splice(i,1,'_')
+
+            }
+
+        }
+        alert(b.join(""))
+
+    </script>
 </body>
 </html>

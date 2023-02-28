@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        function processConfirm(answer) {
+            let result = "";
+                if(answer){
+                   return   result = "Excellent"
+                }else{
+                   return  result= " See you again"
+                }
+        }
+        //Hàm confirm() nhận vào một đối duy nhất đó là thông báo để hiển thị trong hợp thoại.
+        //Chỉ có một lưu ý với hàm confirm() bạn nên đặt nội dung thông báo dạng câu hỏi hoặc thông điệp cuộc sống.
+        let  confirmAnswer = confirm("Shall we play a game ?")
+        let theAnswer = processConfirm(confirmAnswer);
+        alert(theAnswer)
+
+    </script>
 </body>
 </html>

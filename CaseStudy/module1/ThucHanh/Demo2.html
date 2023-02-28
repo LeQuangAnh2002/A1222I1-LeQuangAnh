@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.-->
+
+<script>
+        let a = [];
+
+         let b = prompt("Nhập kích thước của mảng:")
+        for(let i = 0;i <= b;i++){
+            a[i] = parseInt(prompt("Nhập giá trị vào mảng là " + b + " giá tri" ))
+        }
+        document.write("Mảng ban đầu nhập vào "+ a + "<br>")
+        let max = 0;
+        let index = 0;
+        for(let i = 0; i< a.length;i++){
+            if(max < a[i]){
+                max = a[i]
+                a[i] = max
+                index = i;
+            }
+
+        }
+        document.write("giá trị lớn nhất trong mảng: " + max + " nằm tại vị trí: "+ index)
+</script>
 </body>
 </html>

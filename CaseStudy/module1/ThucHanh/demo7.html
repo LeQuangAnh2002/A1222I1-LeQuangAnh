@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+        let a = [12,14,15,6,5,3,4,6,7,82,20]
+        let b =parseInt(prompt("Nhập giá trị V vào"))
+        for(let i = 0; i < a.length; i++){
+            if(b === a[i]){
+                a.splice(i,1);
+                a.push(0)
+            }
+
+        }
+        document.write(a)
+
+</script>
 </body>
 </html>

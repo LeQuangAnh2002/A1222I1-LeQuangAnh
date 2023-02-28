@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--    // công thức tính diện tích hình tròn: S= 3.14 * (r*r) trong đó r là bán kính-->
+<!--    // công thức  tính chu vi hình tròn : C= d * 3.14 trong đó d là đường kính-->
+
+    <script>
+        function dienTich(num) {
+            let  S= 3.14 * Math.pow(num,2);
+            return S;
+        }
+        function chuVi(num) {
+            let C= num * 3.14;
+            return C;
+        }
+        let a = prompt("Nhập giá trị vào ")
+        let resultOne = 0;
+        let resultTwo = 0;
+        resultOne =  dienTich(a)
+        resultTwo = chuVi(a)
+
+        alert("Diện tích hình tròn "+ resultOne)
+        alert("Chu vi hình tròn "+ resultTwo)
+
+
+
+    </script>
+
 </body>
 </html>

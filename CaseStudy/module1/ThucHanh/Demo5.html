@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = prompt("Nhập chuỗi vào mảng")
+        let ng= 0;
+        let pa = 0;
+        let str ;
+        let array=[];
+        for(let i = 0; i < a.length;i++){
+            array.push(a[i])
+            str = a[i]
+            if(str == 'u'|| str == 'e'|| str == 'o'|| str =='a'|| str == 'i'){
+                ng++
+            }else{
+                pa++
+            }
+        }
+        alert(array.join(""))
+        alert("Nguyên Âm " + ng + " || " + " Phụ Âm " + pa)
+    </script>
 </body>
 </html>

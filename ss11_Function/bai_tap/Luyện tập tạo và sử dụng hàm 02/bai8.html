@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+<script>
+        let a = [];
+        let n = prompt("Nhập kích thước của mảng")
+        for (let i = 0; i < n;i++){
+            a[i] = parseInt(prompt("Nhập giá trị vào mảng "+(i+1)))
+        }
+        function isArray(array) {
+            for (let i = 0; i < array.length;i++){
+                array.reverse()
+            }
+            alert(array)
+        }
+        isArray(a)
+</script>
+</body>
+</html>

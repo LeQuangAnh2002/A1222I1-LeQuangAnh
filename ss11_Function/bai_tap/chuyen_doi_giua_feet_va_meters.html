@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let n = prompt("Nhập 1 giá trị vào met")
+        let b = prompt("Nhập 1 giá trị vào feet")
+        function footoToMeter(foot) {
+            let meter = 0.305 * foot;
+            return meter;
+        }
+        function meterToFoot(meter){
+            let foot = 3.279 * meter;
+            return foot;
+        }
+        alert("Kết quả trả về meters "+ footoToMeter(n))
+        alert("Kết quả trả về feet "+ meterToFoot(b))
+    </script>
 </body>
 </html>

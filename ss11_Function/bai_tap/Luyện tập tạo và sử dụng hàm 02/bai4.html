@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+
+
+
+        function isNumber(num) {
+
+            if(isNaN(num)){
+                return false;
+            }else {
+                return true;
+            }
+
+
+
+        }
+        let a = prompt("giá trị cần kiểm tra")
+
+         if(isNumber(a)){
+             alert("giá trị truyền vào là số nguyên")
+         }else{
+             alert("giá trị truyền vào không phải là số nguyên")
+         }
+
+
+
+    </script>
+
 </body>
 </html>
