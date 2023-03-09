@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <table >
+            <tr>
+                <th>Số Kwh</th>
+                <th>Số tiền</th>
+
+            </tr>
+            <tr>
+                <td>Bậc 1(0 đến 50kwh)</td>
+                <td>1.678 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td>Bậc 2(51 đến 100kwh)</td>
+                <td>1.734 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td>Bậc 3(101 đến 200kwh)</td>
+                <td>2.014 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td>Bậc 4(201 đến 300kwh)</td>
+                <td>2.536 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td>Bậc 5(301 đến 400kwh)</td>
+                <td>2.834 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td>Bậc 6(401 đến 500kwh)</td>
+                <td>2.927 đồng/kwh</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="inputPoint"></td>
+                <td><input type="button" onclick="isPoint()" value="Click Me"></td>
+            </tr>
+            <tr >
+                <td colspan="2">
+                    <p id="output"></p>
+                </td>
+
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function isPoint() {
+            let point = parseFloat(document.getElementById('inputPoint').value);
+            if( point <= 50){
+                let tien = point * 1.678;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }else if( point <= 100){
+                let tien = point * 1.734 ;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }else if( point <= 200){
+                let tien = point * 2.014 ;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }else if( point <= 300){
+                let tien = point * 2.536 ;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }else if( point <= 400){
+                let tien = point * 2.834 ;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }else if( point <= 500){
+                let tien = point * 2.927 ;
+                document.getElementById('output').innerText = tien + " nghìn";
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập số a"))
+        let b = parseInt(prompt("Nhập số b"))
+
+        if(isNaN(a) || isNaN(b)){
+            alert("bạn đã nhập sai kiểu dữ liệu")
+        }else{
+            if(a % b === 0){
+                alert("a chia hết cho b")
+            }else{
+                alert("a không chia hết cho b")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let point = parseFloat(prompt("Nhập điểm vào ô trống"))
+
+        if(isNaN(point)){
+            alert("Điểm nhập vào không phải dạng số(number)")
+        }else{
+            if(point <= 10 && point >= 9){
+                alert("Xuất sắc")
+            }else if(point >= 8){
+                alert("Giỏi")
+            }else if(point >=6.5){
+                alert("Khá")
+            }else if(point >= 5){
+                alert("Trung binh")
+            }else{
+                alert("Yếu")
+            }
+        }
+
+    </script>
+</body>
+</html>

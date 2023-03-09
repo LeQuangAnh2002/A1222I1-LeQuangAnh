@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Diện tích tam giác vuông được tính bằng: ½ tích chiều cao với chiều dài đáy.-->
+
+<!--Công thức tính diện tích hình tam giác vuông-->
+
+<!--S = ½ (a x b)-->
+
+<!--Trong đó: a, b là độ dài của hai cạnh góc vuông-->
+    <script>
+        let a = parseFloat(prompt("Nhập độ dài "))
+        let b = parseFloat(prompt("Nhập độ dài "))
+        let s = (1/2) * (a*b)
+        if(isNaN(a) || isNaN(b)){
+            alert("Không phải gia trị số")
+
+        }else{
+
+                alert("Diện tích tam giác vuông " + s)
+
+
+        }
+    </script>
+</body>
+</html>

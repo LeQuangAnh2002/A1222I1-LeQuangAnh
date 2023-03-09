@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+            constructor(length,height) {
+                this.length = length;
+                this.height = height;
+            }
+            get GetPerimeter(){
+                return (this.height + this.length) * 2 ;
+            }
+            get GetAcreage(){
+
+                return (this.height * this.length);
+
+            }
+            set SetHeight(height){
+                this.height = height;
+            }
+            set SetLeight(length){
+                this.length = length;
+            }
+
+            ShowPerimeter(){
+                return 'Chu vi hình chữ nhật :'+ this.GetPerimeter;
+            }
+            ShowAcreage(){
+                return 'Diện tích hình chu vi :' + this.GetAcreage;
+            }
+        }
+        let  rectangle = new Rectangle(7,6);
+        console.log(rectangle.ShowPerimeter());
+        console.log(rectangle.ShowAcreage());
+        rectangle.SetHeight = 9;
+        rectangle.SetLeight = 5;
+        console.log(rectangle.ShowAcreage());
+        console.log(rectangle.ShowPerimeter());
+
+
+
+
+
+
+
+
+        // let rectangle = new Rectangle(5,5);
+        //
+        // let chuvi = rectangle.perimeter;
+        // let dientich = rectangle.acreage;
+        // console.log(chuvi)
+        // console.log(dientich)
+
+    </script>
+</body>
+</html>

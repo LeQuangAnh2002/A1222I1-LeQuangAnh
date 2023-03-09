@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <input type="button" value="BẬT ĐIỆN THOẠI" onclick="mainOn()">
+                    <input type="button" value="TẮT ĐIỆN THOẠI" onclick="mainOff()">
+                    <input type="button" value="SẠC PIN" onclick="main()">
+                    <input type="button" value="SOẠN TIN NHẮN" onclick="nhanTin()">
+                    <input type="button" value="THƯ ĐÃ GỬI" onclick="ThuGui()">
+                    <input type="button" value="TRẠNG THÁI PIN" onclick="trangThaiPin()">
+
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+
+    <script>
+        class Mobile{
+            constructor(battery,memoryArea,inbox) {
+                this.battery = battery;
+
+                this.memoryArea = [];
+                this.inbox = [];
+
+            }
+            set SetBattery(battery){
+                if(battery >= 0 && battery <=100) {
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            get GetBattey(){
+                return this.battery;
+            }
+            Battery(){
+                alert( "Pin "+ this.battery+ "%");
+            }
+
+            Charge(){
+                alert("Đang sạc " +this.battery++ + " %");
+            }
+
+            TurnOn(){
+                alert("Bật điện thoại")
+            }
+            TurnOff(){
+                alert("Tắt điện thoại")
+            }
+            SoanThao(){
+
+                    this.memoryArea = prompt("Nhập tin nhắn vào")
+                    this.inbox.push(this.memoryArea);
+                    this.battery--;
+
+            }
+            ThuDaGui(){
+                if(this.inbox == ""){
+                    alert("Đang trống");
+                    this.battery--;
+                }else{
+                    alert(this.inbox);
+                    this.battery--;
+                }
+            }
+        }
+        var mobile = new Mobile(10)
+
+        function main() {
+            mobile.Charge();
+        }
+        function mainOn() {
+            mobile.TurnOn()
+        }
+        function  mainOff() {
+            mobile.TurnOff();
+        }
+        function nhanTin() {
+            mobile.SoanThao();
+        }
+        function ThuGui() {
+            mobile.ThuDaGui();
+        }
+        function trangThaiPin() {
+            mobile.Battery();
+        }
+    </script>
+
+
+
+</body>
+</html>

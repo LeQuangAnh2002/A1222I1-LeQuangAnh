@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+        class Temperature{
+            constructor(number) {
+                this.number = number;
+            }
+
+            set SetTheNumber(number){
+                this.number = number;
+            }
+
+            get GetTheNumber(){
+                return this.number = number ;
+            }
+
+            ConvertF (){
+                return 'độ C sang F ' + (1.8 * this.number + 32);
+            }
+            ConvertK (){
+                return 'độ C sang K ' + (this.number + 273);
+
+            }
+
+
+
+
+        }
+
+        let doC = new Temperature();
+        doC.SetTheNumber = 25;
+        document.write(doC.ConvertF()+"<br>");
+        document.write(doC.ConvertK());
+
+
+
+
+</script>
+</body>
+</html>

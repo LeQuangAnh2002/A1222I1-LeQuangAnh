@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập số a"))
+        let b = parseFloat(prompt("Nhập số b"))
+        let c = parseFloat(prompt("Nhập số c"))
+
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            alert("Một trong ba ô không phải dạng number")
+        }else {
+            if((a + b) > c && (b+c) > a && (a+c) > b){
+                alert("Ba giá trị là cạnh của một tam giác")
+            }else {
+                alert("Một trong ba cạnh không phải là cạnh của tam giác")
+            }
+        }
+
+    </script>
+</body>
+</html>

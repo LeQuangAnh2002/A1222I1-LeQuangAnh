@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Công thức tính diện tích hình chữ nhật: S = a x b-->
+<!--S: Ký hiệu của diện tích hình chữ nhật.-->
+<!--a: Kích thước chiều dài của hình chữ nhật.-->
+<!--b: Kích thước chiều rộng hình chữ nhật.-->
+    <script>
+        let a = parseFloat(prompt("Nhập số a "))
+        let b = parseFloat(prompt("Nhập số b "))
+        let s = a * b ;
+        if(isNaN(a) || isNaN(b) || a=="" || b==""){
+            alert("Một trong hai giá trị không phải là giá trị số(number)")
+        }else{
+
+                 alert("Diện tích hình chữ nhật " + s);
+
+        }
+    </script>
+</body>
+</html>

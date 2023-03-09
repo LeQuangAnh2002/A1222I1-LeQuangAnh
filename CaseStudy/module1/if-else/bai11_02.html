@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.-->
+    <p id="output"></p>
+    <script>
+        let soTien = parseFloat(prompt("Nhập số tiền vay "))
+        let thang = parseInt(prompt("Số tháng"))
+        let traGoc = soTien / thang;
+        let tongPhaiTra = 0;
+        document.write("Số tiền vay " + soTien + " và vay trong " + thang + "<br>")
+        for (let i = 1 ; i <= thang;i++){
+            let traLai = soTien * 0.05;
+            soTien = soTien - traGoc;
+             tongPhaiTra = traGoc + traLai;
+            document.write("Tháng " + i + " lãi phải trả "+traLai+ " gốc phải trả "+ traGoc + " tổng phải trả "+ tongPhaiTra + " và số tiền còn lại " + soTien + "<br>")
+        }
+
+    </script>
+</body>
+
+</html>
