@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số phần tử trong mảng A: "));
+        let m = parseInt(prompt("Nhập sô phần tử trong mảng B: "));
+        let a = [];
+        let b = [];
+        let c = [];
+        for(let i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Nhập số mảng A là: "));
+        }
+        document.write("Mảng A bao gồm [" + a + "] <br>");
+        for(let i = 0; i < m; i++) {
+            b[i] = parseInt(prompt("Nhập vào mảng B là: "));
+        }
+        document.write("Mảng B bao gồm [" + b + "] <br>");
+        for (let i = 0; i < b.length; i++) {
+            let flag = false;
+            for (let j = 0; j <= a.length; j++) {
+                if (a[j] === b[i]) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag === false) {
+                c.push(b[i]);
+            }
+        }
+        document.write("Mảng C bao gồm [" + c + "]");
+    </script>
+</body>
+</html>

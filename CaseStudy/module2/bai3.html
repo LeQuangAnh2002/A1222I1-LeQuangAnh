@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    //    *   i =1; j=4;-->
+<!--    //   * *  i=2 ; j=3,5;-->
+<!--    //  *   * i =3; j =2,6;-->
+<!--    // *******i= 4; j = 1,2,3,4,5,6,7;-->
+<!--    // i = n vs j = n - i+1 ; j = n+i-1;-->
+    <script>
+        let n = 4;
+        for (let i = 1; i<=n ; i++ ){
+            for (let j = 1; j <= 2*n-1;j++ ){
+                if(i===n||j=== n-i+1|| j ===n+i-1){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp;&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>

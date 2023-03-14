@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+<!--        Hình A-->
+        let h =10;
+        for (let i = 0; i < h; i++){
+            for (let j =0; j < i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        //hình B
+        let k = 10;
+        for (let i = 0; i < k ;i++){
+            for (let j = i; j < k-1;j++){
+                 document.write("&nbsp;&nbsp;");
+            }
+            for (let j = 0;j <= i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        //Hình C
+        let m = 10;
+        for (let i = 0; i < m; i++){
+            for (let j = 0; j < i;j++){
+                document.write("&nbsp;&nbsp;");
+            }
+            for (let j = i; j < m;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        // Tam giác vuông rỗng
+        //* i = 1 ; j= 1
+        //** i = 2; j =1,2;
+        //* * i = 3; j =1,3;
+        //**** i =4; j=1,2,3,4;
+        // j =1 ; i = j; i === n;
+        let n = 5;
+        for (let i = 0 ; i <= n;i++){
+            for (let j = 1; j<= i;j++){
+                if(j===i || j === 1 || i=== n){
+                    document.write("*");
+                }else{
+                    document.write("&nbsp;&nbsp;");
+                }
+
+            }
+            document.write("<br>");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let h =10;
+        // for (let i = 0 ; i < h ; i++){
+        //     for (let j = 0; j <= i; j++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+        //
+        //
+        //
+        // let k =10;
+        // for (let i = 0; i < k ; i++ ){
+        //     for (let j =i; j < k-1;j++){
+        //         document.write("&nbsp;&nbsp;");
+        //     }
+        //     for (let j = 0; j <=i;j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+        //
+        // let m = 10;
+        // for (let i = 0; i < m;i++){
+        //     for (let j =0 ; j < i;j++ ){
+        //         document.write("&nbsp;&nbsp;");
+        //     }
+        //     for (let j = i ; j < m;j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+    </script>
+</body>
+</html>
