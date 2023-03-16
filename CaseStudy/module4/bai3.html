@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+        let s1 = "aabcc";
+        let s2 = "adcaa";
+        let a = [];
+        let b = [];
+        a = s1.split("");
+        b = s2.split("");
+        let count = 0;
+
+        for (let i = 0 ; i < a.length;i++){
+            for (let j = 0 ; j < b.length;j++){
+
+                if(a[i] === b[j]){
+                    count++;
+                    a.splice(i,1);
+                    b.splice(j,1);
+
+                    i--;
+
+                }
+
+            }
+            console.log(count );
+        }
+
+</script>
+</body>
+</html>

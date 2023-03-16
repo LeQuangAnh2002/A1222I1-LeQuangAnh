@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form>-->
+<!--    <table border="1">-->
+<!--        <tr>-->
+<!--            <th>Lựa chọn</th>-->
+<!--            <th>Nước uống</th>-->
+<!--            <th>Gía tiền</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>1</td>-->
+<!--            <td>Cafe</td>-->
+<!--            <td>10.000k</td>-->
+
+<!--        </tr><tr>-->
+<!--            <td>2</td>-->
+<!--            <td>Cam vắt</td>-->
+<!--            <td>20.000k</td>-->
+
+<!--        </tr><tr>-->
+<!--            <td>3</td>-->
+<!--            <td>Nước ép cà rốt</td>-->
+<!--            <td>25.000k</td>-->
+
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>4</td>-->
+<!--            <td>Nước ép cà chua</td>-->
+<!--            <td>20.000k</td>-->
+
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>5</td>-->
+<!--            <td>Nước lọc</td>-->
+<!--            <td>5.000k</td>-->
+
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>6</td>-->
+<!--            <td>Nước dừa</td>-->
+<!--            <td>15.000k</td>-->
+
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>7</td>-->
+<!--            <td>Thoát chương trình</td>-->
+<!--            <td>&nbsp;</td>-->
+<!--        </tr>-->
+
+<!--    </table>-->
+<!--</form>-->
+<script>
+
+    let sum = 0;
+    let soLuong ;
+    let check = false;
+        do {
+            alert(
+                "Danh sách menu "
+
+
+            )
+
+            let water  = +prompt("Nhập nước uống bạn muốn ");
+
+
+            switch (water) {
+                case 1 :
+                    alert(" Cafe có giá 5000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 5000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+
+                case 2:
+                    alert("Cam vắt 20.000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 20000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+                case 3:
+                    alert("Nước ép cà rốt 25.000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 25000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+                case 4:
+                    alert("Nước ép cà chua 5.000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 25000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+                case 5:
+                    alert("Nước lọc 5.000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 25000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+                case 6:
+                    alert("Nước dừa 15.000k");
+                    sum = 0;
+                    soLuong = +prompt("Nhập số lượng vào ");
+                    sum = soLuong * 25000;
+                    alert("Tổng tiền " + sum +" ngàn");
+                    check = true;
+                    break;
+                case 7 :
+                    alert("Hẹn gặp lại");
+                    check = false;
+                    break;
+
+            }
+        }while (check === true)
+</script>
+</body>
+</html>

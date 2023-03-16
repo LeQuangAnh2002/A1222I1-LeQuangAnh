@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = prompt("nhập vao");
+    let b = [];
+    b = a.split("");
+    let count = 0;
+    let queen ;
+
+    for (let i = 0 ; i < b.length;i++){
+        queen = b[0];
+
+        if(queen !== b[i]){
+            count++;
+
+        }
+
+    }
+    alert(b.join(' '));
+    alert("Mảng nhập vào có " + count + " khác nhau");
+</script>
+
+</body>
+</html>

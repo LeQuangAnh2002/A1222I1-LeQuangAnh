@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "tRuong  TaN  HAI "
+    let b =[];
+     b=a.split(" "); // dùng hàm split để cắt chuỗi cách nhau bởi dấu khoảng trắng.
+    // => ['tRuong', 'TaN',  'HAI' ]
+
+
+     let kq ="";
+     let temp;
+    for (let i = 0; i <b.length; i++){
+        temp = b[i].toLowerCase().trim();
+
+        if(temp !== ""){
+            temp = temp.slice(0,1).toUpperCase() + temp.slice(1).toLowerCase();
+            kq += temp + " ";
+        }
+    }
+       document.write(kq.trim());
+
+
+</script>
+</body>
+</html>
