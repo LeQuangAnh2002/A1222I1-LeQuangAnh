@@ -5,17 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-    <input type="number" id="number1">
-    <input type="button" onclick="isClickMe()" value="ClickMe">
-    <p id="out"></p>
-    <script>
 
-        function isClickMe() {
-           let one =  +document.getElementById('number1'). value;
-           document.getElementById('out').innerText = one + 1;
-           document.getElementById('number1').value = " ";
-        }
+<input type="text" id="isNumber" >
+<input type="button" onclick="isPlus()" value="ClickMe">
+<p id="output"></p>
+<script>
+    function isPlus() {
+        let one = +document.getElementById('isNumber').value;
+        document.getElementById('output').innerText = one + 1;
+        document.getElementById('isNumber').value = " ";
 
-    </script>
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

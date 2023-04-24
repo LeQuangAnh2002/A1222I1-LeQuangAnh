@@ -5,24 +5,66 @@
     <title>Title</title>
 </head>
 <body>
-    <input type="number" id="number1">
-    <input type="number" id="number2">
-    <input type="button" onclick="isNumbers()" value="ClickMe">
-    <p id="out"></p>
-    <script >
+<!--    <input type="number" id="number1">-->
+<!--    <input type="number" id="number2">-->
+<!--    <input type="button" onclick="isNumbers()" value="ClickMe">-->
+<!--    <p id="out"></p>-->
+<!--    <script >-->
 
-            function isNumbers() {
-                let num1 = +parseInt(document.getElementById('number1').value);
-                let num2 = +parseInt(document.getElementById('number2').value);
-            if(num1 > num2){
-                alert("số thứ nhất lớn hơn số thứ 2")
-            }else if(num1 < num2 || num1 === num2){
-                alert("Tổng 2 số là = "+ (Number(num1) + Number(num2)))
-            }
-            }
+<!--            function isNumbers() {-->
+<!--                let num1 = +parseInt(document.getElementById('number1').value);-->
+<!--                let num2 = +parseInt(document.getElementById('number2').value);-->
+<!--            if(num1 > num2){-->
+<!--                alert("số thứ nhất lớn hơn số thứ 2")-->
+<!--            }else if(num1 < num2 || num1 === num2){-->
+<!--                alert("Tổng 2 số là = "+ (Number(num1) + Number(num2)))-->
+<!--            }-->
+<!--            }-->
 
 
-    </script>
+<!--    </script>-->
+<label>Ô thứ nhất</label>
+<input type="text" id="isNumber1">
+<label>Ô thứ hai</label>
+<input type="text" id="isNumber2">
+<input type="button" onclick="compare()" value="ClickMe">
+<p id="output"></p>
+<script>
+    function compare() {
+        let number1 = +document.getElementById('isNumber1').value;
+        let number2 = +document.getElementById('isNumber2').value;
+        if (number1 > number2){
+            alert("Số thứ nhất lớn hơn số thứ hai")
+            document.getElementById("isNumber1").value = "";
+            document.getElementById("isNumber2").value = "";
+        }else{
+            alert("tổng 2 giá trị vào : " + number1*number2)
+            document.getElementById("isNumber1").value = "";
+            document.getElementById("isNumber2").value = "";
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

@@ -12,16 +12,16 @@
 
         function giaiThua(number) {
             let sum = 1;
-            for (let i = 1; i <= number;i++){
-                sum *= i;
+            for(let i =1 ; i <= number; i++){
+                sum = sum * i;
+
             }
-          return sum;
+            return sum
 
         }
-        let a = prompt('Nhập giai thừa vào')
-        let z = giaiThua(a)
-        alert(z);
-
+         let isNumber = +prompt("Nhập 1 số vào");
+         let z = giaiThua(isNumber);
+         alert(z);
 
 
 

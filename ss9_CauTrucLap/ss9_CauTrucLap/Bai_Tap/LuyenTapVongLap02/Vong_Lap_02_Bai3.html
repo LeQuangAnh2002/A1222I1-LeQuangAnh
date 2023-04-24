@@ -10,19 +10,19 @@
     // để vẻ sao thì ta lồng 1 vòng for tiếp khai báo biến j = 0 và j phải thảo mãn điều kiện j <= i
     // khi mà i = 0 và j = 0 thì thõa mãn điều kiện thì sẽ vẽ 1 dấu sao và j++ sẽ lên 1 so sánh thằng i = 0 thì ko thảo mãn điều kiện <br>
 
-    for(let i=0; i < 5;i++){
-        for(let j = 0; j <= i;j++){
+    for(let i=1; i <= 5;i++){
+        for(let j = 1; j <=i;j++){
             document.write("*")
         }
         document.write("<br>");
     }
 
-    for(let i=4; i >= 0;i--){
-        for(let j = 0; j <= i;j++){
-            document.write("*")
-        }
-        document.write("<br>");
-    }
+    // for(let i=4; i >= 0;i--){
+    //     for(let j = 0; j <= i;j++){
+    //         document.write("*")
+    //     }
+    //     document.write("<br>");
+    // }
 </script>
 </body>
 </html>

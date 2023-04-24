@@ -19,18 +19,18 @@
             for (let j = 0 ; j < b.length;j++){
 
                 if(a[i] === b[j]){
+                    b[j] = ""; // nếu a[i] === b[j] thì cho phần tử vị trí đó chuỗi rỗng và count ++ break; thoát khỏi vòng lặp.
                     count++;
-                    a.splice(i,1);
-                    b.splice(j,1);
 
-                    i--;
+
+                    break;
 
                 }
 
             }
-            console.log(count );
-        }
 
+        }
+        document.write("mảng giống nhau " +count);
 </script>
 </body>
 </html>

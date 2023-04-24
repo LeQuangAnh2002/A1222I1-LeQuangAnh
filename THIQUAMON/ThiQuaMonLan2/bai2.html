@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    let chuoi = prompt("Nhập vào chuỗi ");
+    let array = [];
+        array = chuoi.split('');
+        let count  = 0;
+        for (let i = 0 ; i  < array.length;i++){
+            if(array[i] === array[i].toUpperCase()){
+                count++;
+            }
+
+
+
+        }
+        if(count === 0){
+            alert("The String is not contain upper char");
+        }else{
+            alert("Kết quả có "+ count + " Viết hoa");
+        }
+
+
+    </script>
+</body>
+</html>

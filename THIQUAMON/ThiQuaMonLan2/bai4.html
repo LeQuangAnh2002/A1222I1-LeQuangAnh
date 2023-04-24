@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="id">Mã điện Thoại <span>(*)</span></label><span id="error_id"></span>
+    <br>
+    <input type="text" id="id" onblur="checkId()">
+    <br>
+    <label for="namePhone">Tên điện thoại <span>(*)</span></label><span id="error_name"></span>
+    <br>
+    <input type="text" id="namePhone" onblur="checkName()">
+    <br>
+
+    <label>Hãng sản xuất  <span>(*)</span></label><span id="error_hang"></span>
+    <br><br>
+    <select id="hangSanXuat" onblur="checkHang()" >
+        <option value="">--Chọn hãng điện thoại--</option>
+        <option value="IPHONE">Iphone</option>
+        <option value="SAMSUNG">SamSung</option>
+        <option value="XIAOMI">Xiaomi</option>
+        <option  value="VSMART">Vsmart</option>
+        <option value="NOKIA">Nokia</option>
+
+    </select>
+    <br> <br>
+    <label for="gia"> Gía tiền <span>(*)</span></label><span id="error_gia" ></span>
+    <br>
+    <input type="number" id="gia" onblur="checkGia()">
+    <br><br>
+    <input type="button" onclick="add()" value="ADD">
+    <hr>
+    <table border="1" id="render">
+        <tr>
+            <th>Mã Điện Thoại</th>
+            <th>Tên Điện Thoại</th>
+            <th>Hãng Sản Xuất</th>
+            <th>Gía Điện Thoại</th>
+        </tr>
+    </table>
+</form>
+    <script>
+        var data = [];
+        function add() {
+            let idPhone = document.getElementById('id').value;
+            let namePhone = document.getElementById('namePhone').value;
+            let hangPhone = document.getElementById('hangSanXuat').value;
+            let pricePhone = document.getElementById('gia').value;
+
+            var item = {
+                Id: idPhone,
+                Name : namePhone,
+                Hang : hangPhone,
+                Price : pricePhone
+            }
+            data.push(item);
+            console.log(data);
+            render();
+
+        }
+        function render() {
+            var table = ` <tr>
+            <th>Mã Điện Thoại</th>
+            <th>Tên Điện Thoại</th>
+            <th>Hãng Sản Xuất</th>
+            <th>Gía Điện Thoại</th>
+        </tr>
+            `
+
+            for (let i = 0 ; i < data.length;i++){
+                table +=`<tr>
+            <td>${data[i].Id}</td>
+            <td>${data[i].Name}</td>
+            <td>${data[i].Hang}</td>
+            <td>${data[i].Price}</td>
+        </tr>`
+            }
+
+            document.getElementById('render').innerHTML = table;
+
+        }
+        function checkId() {
+            let id = document.getElementById('id').value;
+            let check_error_id = document.getElementById('error_id');
+            if( id == "" || id == null || id.length <= 0){
+                    check_error_id.innerHTML = "<span style='color: red'> Id không được để trống</span>";
+                    return false;
+            }else{
+                check_error_id.innerHTML = "";
+                return id;
+            }
+        }
+        function checkName() {
+            let idName = document.getElementById('namePhone').value;
+            let check_error_name = document.getElementById('error_name');
+            if( idName == "" || idName == null || idName.length <= 0){
+                check_error_name.innerHTML = "<span style='color: red'> Tên điện thoại không được để trống</span>";
+            }else{
+                check_error_name.innerHTML = "";
+                return idName;
+            }
+        }
+        function checkHang() {
+            let idHang = document.getElementById('hangSanXuat').value;
+            let check_error_hang = document.getElementById('error_hang');
+            if( idHang == "" || idHang == null || idHang.length <= 0){
+                check_error_hang.innerHTML = "<span style='color: red'> Hãng điện thoại đang để trống</span>";
+            }else{
+                check_error_hang.innerHTML = "";
+                return idHang;
+            }
+        }
+        function checkGia() {
+            let gia = document.getElementById('gia').value;
+            let check_error_gia = document.getElementById('error_gia');
+            if( gia == "" || gia == null || gia.length < 0){
+                check_error_gia.innerHTML = "<span style='color: red'> Hãng điện thoại đang để trống</span>";
+            }else if(isNaN(gia)){
+                check_error_gia.innerHTML = "<span style='color: red'> không hợp lệ</span>";
+            }
+            else{
+                check_error_gia.innerHTML = "";
+                return gia;
+            }
+        }
+
+    </script>
+</body>
+</html>

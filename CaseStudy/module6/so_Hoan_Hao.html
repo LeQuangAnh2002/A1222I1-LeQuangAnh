@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n ;
+    let s = 0;
+    do {
+        n = +prompt("Nhập dữ liệu vào cần so sánh");
+        if( n <= 0){
+         n =  +prompt("n phải lớn hơn 0 ");
+         document.write(n);
+        }
+    }while (n <= 0);
+
+    for (let i = 0 ; i < n; i++){
+        if(n % i ==0){
+            s+= i;
+        }
+    }
+    if(s===n ){
+        alert(n+" Đây là số hoàn hảo "+ s);
+    }else{
+        alert(n+" Đây ko phải số hoàn hảo "+ s);
+    }
+
+
+</script>
+
+
+</body>
+</html>

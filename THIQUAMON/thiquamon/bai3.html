@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label for="bienso">Biển số xe <span></span></label>
+        <br>
+        <input type="text" id="bienso" onchange="checkNumber()">
+        <br>
+        <label for="hoten">Họ và tên</label>
+        <br>
+        <input type="text" id="hoten">
+        <br>
+        <label for="CMND">CMNND</label>
+        <br>
+        <input type="text" id="CMND">
+        <br>
+        <label>Hãng xe máy </label>
+        <br><br>
+        <select id="HangXe" >
+            <option value="">--Chọn hãng xe--</option>
+            <option value="Honda">Honda</option>
+            <option value="Yamaha">Yamaha</option>
+            <option value="SYM">SYM</option>
+            <option  value="Piaggio">Piaggio</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Ducati">Ducati</option>
+
+        </select>
+        <br> <br>
+        <label>Phí gửi xe</label>
+        <br>
+        <input type="text" id="phiguixe">
+        <br><br>
+        <input type="button" onclick="add()" value="ADD">
+        <hr>
+        <table border="1" id="render">
+           <tr>
+               <th>BIỂN SỐ XE</th>
+               <th>HỌ VÀ TÊN</th>
+               <th>CHỨNG MINH NHÂN DÂN</th>
+               <th>HÃNG XE</th>
+               <th>PHÍ GỬI XE</th>
+           </tr>
+        </table>
+    </form>
+<script>
+        var data = [];
+    function add() {
+        let item_bienSo = document.getElementById('bienso').value;
+        let  item_hoTen = document.getElementById('hoten').value;
+        let item_CMND = document.getElementById('CMND').value;
+        let item_HangXe = document.getElementById('HangXe').value;
+        let item_phiGuiXe = document.getElementById('phiguixe').value;
+
+        var item = {
+                Id : (Math.random()*10),
+                BienSo : item_bienSo,
+                HoTen : item_hoTen,
+                CMNDan: item_CMND,
+                HangXe : item_HangXe,
+                PhiGuiXe : item_phiGuiXe
+        }
+
+        data.push(item);
+        console.log(data);
+
+        render();
+        reset();
+        alert("Thêm thành công")
+    }
+
+    function render() {
+        var table = `<tr>
+               <th>BIỂN SỐ XE</th>
+               <th>HỌ VÀ TÊN</th>
+               <th>CHỨNG MINH NHÂN DÂN</th>
+               <th>HÃNG XE</th>
+               <th>PHÍ GỬI XE</th>
+               <th>ACTION</th>
+           </tr>`
+
+        for (let i = 0; i < data.length ; i++){
+            table += `<tr>
+               <td>${data[i].BienSo}</td>
+               <td>${data[i].HoTen}</td>
+               <td>${data[i].CMNDan}</td>
+               <td>${data[i].HangXe} </td>
+               <td>${data[i].PhiGuiXe}</td>
+               <td>
+                <input type="button" onclick="deleteItem(${data[i].Id})" value="XÓA">
+                </td>
+           </tr>`
+        }
+        document.getElementById('render').innerHTML = table;
+    }
+    function reset() {
+        document.getElementById('bienso').value = " ";
+        document.getElementById('hoten').value = " ";
+        document.getElementById('CMND').value = " ";
+        document.getElementById('phiguixe').value = " ";
+    }
+
+    function deleteItem(x) {
+        for (let i = 0 ; i < data.length ; i++){
+            if(data[i].Id == x){
+                data.splice(i,1);
+                render();
+                alert("xóa thành công")
+            }
+        }
+        console.log(x);
+
+    }
+    function checkNumber() {
+        var x = document.getElementById('bienso').value;
+        if(isNaN(x)){
+            document.getElementById('bienso').style.borderColor = "red";
+        }else{
+            document.getElementById('bienso').style.borderColor = "green";
+        }
+    }
+
+</script>
+</body>
+</html>

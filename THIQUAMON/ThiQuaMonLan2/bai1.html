@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let number = +prompt("Nhập kích thước của mảng");
+
+        let array = [];
+        let result = [];
+        let soChan = 0;
+        let soLe = 0;
+
+            for (let i = 0 ; i < number ; i++){
+                array[i] = +prompt("Nhập phần tử của mảng "+ (i+1));
+                if (array[i] % 2 === 0){
+                    soChan +=  array[i];
+                }else{
+                    soLe += array[i];
+                }
+                result.push(array[i]);
+
+
+        }
+
+        document.write("Danh sách mảng : "+result.join(','))
+        document.write("<hr>"+" Tổng số chẳn :" + soChan+ "<br>");
+        document.write("Tổng số lẽ :" +soLe +"<br>");
+        document.write( "Kết quả sau khi thực hiện :"+soChan + " + " + soLe +" = " + (soChan-soLe) );
+
+    </script>
+</body>
+</html>

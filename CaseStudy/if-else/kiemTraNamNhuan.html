@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <dtitle>Title</dtitle>
+</head>
+<body>
+        <script>
+            function ktrNamNhuan(n) {
+                if( n % 400 ===0){
+                    return true;
+                }else if(n % 4 ===0 && n % 100 !== 0){
+                    return  true;
+                }
+                return false;
+            }
+            let year = +prompt("Nhập năm vào");
+            if(ktrNamNhuan(year) === true){
+                alert(year + " đó là năm nhuận")
+            }else{
+                alert(year+ " ko phải là năm nhuận");
+            }
+
+        </script>
+
+
+</body>
+</html>

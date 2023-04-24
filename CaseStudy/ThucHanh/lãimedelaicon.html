@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTien = +prompt("Nhập số tiền vào")
+    let traGoc = soTien / 5;
+    for (let i = 1;  i <= 5;i++){
+        let traLai = soTien * 0.05;
+        let tongPhaiTra = traGoc + traLai;
+        soTien = soTien - traGoc;
+        document.write("Kỳ hạn " + i + " Trả lãi " + traLai + " Tổng phải trả "+ tongPhaiTra+ " Còn lại " + soTien +"<br>")
+
+    }
+
+
+</script>
+</body>
+</html>

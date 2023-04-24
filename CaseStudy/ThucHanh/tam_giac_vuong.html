@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+    <script>
+
+        let n = +prompt("Nhập chiều cao tam giac");
+        for (let i = 1 ; i <= n;i++){
+            for (let j = 1; j <= i;j++){
+                if (j===i || j===1 || i=== n){
+                    document.write("*")
+                }else{
+                    document.write("&nbsp;&nbsp;");
+                }
+
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

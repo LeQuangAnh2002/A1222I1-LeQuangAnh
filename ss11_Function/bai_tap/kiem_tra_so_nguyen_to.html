@@ -6,25 +6,25 @@
 </head>
 <body>
     <script>
-        for (let i = 2; i < 1000;i++){
-            if(isNumber(i)){
-                document.write(i + "<br>")
+        for (let i = 0 ; i < 1000;i++ ){
+            if(isPrime(i)){
+                document.write(i+ "<br>")
             }
         }
 
-
-        function isNumber(number) {
-            if(number < 2){
+        function isPrime(n) {
+            if(n < 2){
                 return false;
-            }
-            for(let i = 2 ; i < number;i++){
-                if(number % i ===0){
-                    return false;
+            }else{
+                for (let i = 2; i < n; i++){
+                    if( n % i === 0){
+                        return false;
+                    }
                 }
+                return true;
             }
-            return true;
-        }
 
+        }
     </script>
 
 </body>

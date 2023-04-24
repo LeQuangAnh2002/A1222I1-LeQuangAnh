@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label for="id">Id<span>(*)</span></label><span id="error_id"></span>
+        <br><br>
+        <input type="text" id="id" onblur="checkId()">
+        <br><br>
+        <label for="name">Name<span>(*)</span></label><span id="error_name"></span>
+        <br><br>
+        <input type="text" id="name" >
+        <br><br>
+        <label for="class">Class<span>(*)</span></label><span id="error_class"></span>
+        <br><br>
+        <input type="text" id="class" >
+        <br><br>
+        <label for="email">Email<span>(*)</span></label><span id="error_email"></span>
+        <br><br>
+        <input type="text" id="email" >
+        <br><br>
+        <input type="button" onclick="add()" value="ADD">
+        <hr>
+        <table border="1" id="render">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </table>
+
+    </form>
+<script>
+            var data = [];
+
+        function add() {
+            let item_Id = document.getElementById('id').value;
+            let item_Name = document.getElementById('name').value;
+            let item_Class = document.getElementById('class').value;
+            let item_Email = document.getElementById('email').value;
+
+            var item = {
+                Id: item_Id,
+                Name: item_Name,
+                Class: item_Class,
+                Email: item_Email
+            }
+            let index = data.findIndex((c) => c.Id == item.Id);
+            if(index >=0){
+                data.splice(index,1,item);
+            }else{
+                data.push(item);
+            }
+
+
+            render();
+            reset();
+        }
+        function render() {
+            table = `<tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Email</th>
+
+                <th>Action</th>
+
+            </tr>`
+
+            for (let i = 0; i < data.length;i++){
+                table += `<tr>
+                <td>${data[i].Id}</td>
+                <td>${data[i].Name}</td>
+                <td>${data[i].Class}</td>
+                <td>${data[i].Email}</td>
+                 <td>
+                    <input type="button" onclick="updateItem(${data[i].Id})" value="UPDATE">
+                    <input type="button" onclick="deleteItem(${data[i].Id})" value="DELETE">
+                </td>
+            </tr>`
+            }
+            document.getElementById('render').innerHTML = table;
+        }
+        function reset() {
+                document.getElementById('id').value = " " ;
+                document.getElementById('name').value = " " ;
+                document.getElementById('class').value = " " ;
+                document.getElementById('email').value = " " ;
+        }
+        function updateItem(id) {
+            for (let i = 0 ; i < data.length;i++){
+                if(data[i].Id == id){
+                    document.getElementById('id').value = data[i].Id ;
+                    document.getElementById('name').value = data[i].Name ;
+                    document.getElementById('class').value = data[i].Class ;
+                    document.getElementById('email').value = data[i].Email ;
+                }
+            }
+        }
+        function deleteItem(id) {
+                for (let i = 0 ; i < data.length;i++){
+                    if(data[i].Id == id){
+                        data.splice(i,1);
+                        render();
+                    }
+                }
+            }
+        function checkId() {
+            var id = document.getElementById('id').value;
+            var check_error_id = document.getElementById('error_id');
+            if( id == "" || id == null){
+                check_error_id.innerHTML = "<span style='color: red'> Id không được để trống</span>";
+            }else if(isNaN(id)){
+                check_error_id.innerHTML = "<span style='color: red'> Id Không hợp lệ</span>";
+            }else{
+                check_error_id.innerHTML = "";
+                return id;
+            }
+
+        }
+
+</script>
+
+
+</body>
+</html>

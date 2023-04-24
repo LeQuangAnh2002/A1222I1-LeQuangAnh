@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- <script>-->
+<!--     let a = +prompt("Nhập kích thước mảng");-->
+<!--     let b =[];-->
+<!--     let result = [];-->
+<!--        if(isNaN(a) || a >= 51){-->
+<!--            alert("Mời bạn nhập lại kích thước mảng")-->
+
+<!--        }else{-->
+<!--            for (let i = 0 ; i < a ; i++){-->
+<!--                b[i] = prompt("Nhập phần tử vào mảng " + (i+1));-->
+<!--                if( i % 2 == 0){-->
+<!--                    if(a[i] >= a[i-1] || a[i] >= a[i+1]){-->
+<!--                        alert("đây là mảng lượn sóng");-->
+<!--                    }else{-->
+<!--                        alert("đây không phải là mảng lượn sóng")-->
+<!--                    }-->
+<!--                }-->
+<!--     }}-->
+
+
+
+
+
+
+
+
+<!-- </script>-->
+
+<script>
+    let a = [];
+    for (let i = 0; i < 5 ; i++) {
+        let n = +prompt("Nhập Phần Tử:")
+        if (n <= 50 ){
+            a[i] = n;
+        }else {
+            alert("Phần Tử Phải nhỏ Hơn 50")
+            break;
+        }
+    }
+    document.write(a)
+    function dangsong(arr) {
+        let flag = false;
+        for ( i = 1; i <= arr.length-2 ; i++) {
+            if (arr[i] > arr[i+1] && arr[i] > arr[i-1] || arr[i] < arr[i+1] && arr[i] < arr[i-1]){
+                flag = true;
+            }else {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    console.log(a)
+    console.log(dangsong(a));
+</script>
+</body>
+</html>
+</body>
+</html>
+for (let i = 1; i <= number; i++) {
+console.log(n1);
+nextTerm = n1 + n2;
+n1 = n2;
+n2 = nextTerm;
+}

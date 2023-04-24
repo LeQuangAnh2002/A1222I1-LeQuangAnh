@@ -9,26 +9,20 @@
 
 
 
-        function isNumber(num) {
-
-            if(isNaN(num)){
+        function kiemTra(number) {
+            if (isNaN(number)){
                 return false;
-            }else {
+            }else{
                 return true;
             }
 
-
-
         }
-        let a = prompt("giá trị cần kiểm tra")
-
-         if(isNumber(a)){
-             alert("giá trị truyền vào là số nguyên")
-         }else{
-             alert("giá trị truyền vào không phải là số nguyên")
-         }
-
-
+        let theNumber = +prompt("Nhập 1 số bất kì");
+        if (kiemTra(theNumber) === false){
+            alert("Ko phải dạng số");
+        }else{
+            alert(theNumber+ " là kiểu number")
+        }
 
     </script>
 
